@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>浙江省外经贸运行调查监测系统</title>
+    <link rel="stylesheet" href="../style/reset.css" />
+    <link rel="stylesheet" href="../style/base.css" />
+    <link rel="stylesheet" href="../style/header.css" />
+    <link rel="stylesheet" href="../style/list.css" />
+    <link rel="stylesheet" href="../ui/zTree/css/zTreeStyle/zTreeStyle.css" />
+</head>
+<body>
+<div class="wrapper">
+
+    <!--# include file="header.html" -->
+
+    <div class="L_content">
+        <div class="L_title"><h2>易错数据</h2></div>
+        <form action="#">
+            <div class="search">
+                <ul>
+                    <li>
+                        <label>排序方式：</label>
+                        <select class="D_text_f">
+                            <option>请选择</option>
+                            <option>从小到大</option>
+                            <option>从大到小</option>
+                        </select>
+                    </li>
+                    <li><input type="submit" class="search_btn" value="查 询" /></li>
+                    <li>
+                        <label>发送短信：</label><input type="text" class="D_text_f" id="citySel" onclick="showMenu();" />
+                    </li>
+                    <li><input type="button" class="search_btn" value="发送短信" /></li>
+                </ul>
+            </div>
+        </form>
+        <div class="search_list"></div>
+        <div class="L_table_title">
+
+        </div>
+        <div class="L_content">
+            <table>
+                <thead>
+                <tr>
+                    <th width="25"><label><input type="checkbox" class="allChose" /></label></th>
+                    <th>系统提供以下错误类别</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><label><input type="checkbox" name="userId" /></label></td>
+                    <td><a target="_blank" href="detail_34.html">在手订单大于200%的海关数据</a></td>
+                </tr>
+                <tr>
+                    <td><label><input type="checkbox" name="userId" /></label></td>
+                    <td><a target="_blank" href="detail_34.html">在手订单小于-200%的海关数据</a></td>
+                </tr>
+                <tr>
+                    <td><label><input type="checkbox" name="userId" /></label></td>
+                    <td><a target="_blank" href="detail_34.html">下月预计出口大于200%的海关数据</a></td>
+                </tr>
+                <tr>
+                    <td><label><input type="checkbox" name="userId" /></label></td>
+                    <td><a target="_blank" href="detail_34.html">下月预计出口小于-200%的海关数据</a></td>
+                </tr>
+                </tbody>
+            </table>
+            <div class="L_ye" style="margin-bottom: 0;">
+                <span style="margin-left: 7px;" class="red">*提示： 点击具体错误表达式的条件进行此项表达式检查。</span></div>
+            <div class="L_ye">
+                <div>每页20条，共 3 页， 58 条，当前第 页 首 页 | 上一页 | 下一页 | 尾页</div>
+            </div>
+        </div>
+    </div>
+
+    <!--# include file="footer.html" -->
+
+</div>
+<script type="text/javascript" src="../ui/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="../js/base.js"></script>
+<script type="text/javascript" src="../ui/zTree/js/jquery.ztree.core-3.5.min.js"></script>
+<script type="text/javascript" src="../ui/zTree/js/jquery.ztree.excheck-3.5.min.js"></script>
+<script type="text/javascript">
+    var setting = {
+        check: {
+            enable: true,
+            chkboxType: {"Y": "", "N": ""}
+        },
+        view: {
+            dblClickExpand: false
+        },
+        data: {
+            simpleData: {
+                enable: true
+            }
+        },
+        callback: {
+            beforeClick: beforeClick,
+            onCheck: onCheck
+        }
+    };
+
+    var zNodes = [
+        {id: 1, pId: 0, name: "北京"},
+        {id: 2, pId: 0, name: "天津"},
+        {id: 3, pId: 0, name: "上海"},
+        {id: 6, pId: 0, name: "重庆"},
+        {id: 4, pId: 0, name: "河北省", open: true, nocheck: true},
+        {id: 41, pId: 4, name: "石家庄"},
+        {id: 42, pId: 4, name: "保定"},
+        {id: 43, pId: 4, name: "邯郸"},
+        {id: 44, pId: 4, name: "承德"},
+        {id: 5, pId: 0, name: "广东省", open: true, nocheck: true},
+        {id: 51, pId: 5, name: "广州"},
+        {id: 52, pId: 5, name: "深圳"},
+        {id: 53, pId: 5, name: "东莞"},
+        {id: 54, pId: 5, name: "佛山"},
+        {id: 6, pId: 0, name: "福建省", open: true, nocheck: true},
+        {id: 61, pId: 6, name: "福州"},
+        {id: 62, pId: 6, name: "厦门"},
+        {id: 63, pId: 6, name: "泉州"},
+        {id: 64, pId: 6, name: "三明"}
+    ];
+
+    function beforeClick(treeId, treeNode) {
+        var zTree = $.fn.zTree.getZTreeObj("treeDemo");
+        zTree.checkNode(treeNode, !treeNode.checked, null, true);
+        return false;
+    }
+
+    function onCheck(e, treeId, treeNode) {
+        var zTree = $.fn.zTree.getZTreeObj("treeDemo"),
+                nodes = zTree.getCheckedNodes(true),
+                v = "";
+        for (var i = 0, l = nodes.length; i < l; i++) {
+            v += nodes[i].name + ",";
+        }
+        if (v.length > 0) v = v.substring(0, v.length - 1);
+        var cityObj = $("#citySel");
+        cityObj.attr("value", v);
+    }
+
+    function showMenu() {
+        var cityObj = $("#citySel");
+        var cityOffset = $("#citySel").offset();
+        $("#menuContent").css({left: cityOffset.left + "px", top: cityOffset.top + cityObj.outerHeight() + "px"}).slideDown("fast");
+
+        $("body").bind("mousedown", onBodyDown);
+    }
+    function hideMenu() {
+        $("#menuContent").fadeOut("fast");
+        $("body").unbind("mousedown", onBodyDown);
+    }
+    function onBodyDown(event) {
+        if (!(event.target.id == "menuBtn" || event.target.id == "citySel" || event.target.id == "menuContent" || $(event.target).parents("#menuContent").length > 0)) {
+            hideMenu();
+        }
+    }
+
+    $(document).ready(function () {
+        $.fn.zTree.init($("#treeDemo"), setting, zNodes);
+    });
+</script>
+<div id="menuContent" class="menuContent" style="display:none; position: absolute;">
+    <ul id="treeDemo" class="ztree" style="margin-top:0; width:160px;"></ul>
+</div>
+</body>
+</html>

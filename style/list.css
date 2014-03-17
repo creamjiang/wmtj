@@ -1,0 +1,235 @@
+.L_content {
+    width: 950px;
+    margin: 0 auto;
+    *margin: 0 auto 10px !important;
+    clear: both;
+}
+
+.L_title {
+    width: 950px;
+    height: 27px;
+    line-height: 27px;
+    background: url("image/title_950.gif") no-repeat;
+}
+
+.L_title h2 {
+    color: #ffffff;
+    font-weight: bold;
+    margin-left: 28px;
+}
+
+.search {
+    margin-top: 7px;
+    margin-bottom: 5px;
+    float: left;
+}
+
+.search ul {
+    width: 950px;
+    float: left;
+}
+
+.search li {
+    width: 230px;
+    float: left;
+    height: 24px;
+    line-height: 24px;
+    padding-left: 7px;
+    margin: 4px 0;
+}
+
+.search li label {
+    width: 70px;
+    float: left;
+    text-align: right;
+}
+
+.L_text_a {
+    width: 155px;
+    height: 20px;
+    line-height: 20px;
+    border: 1px solid #dbdbdb;
+    background: url("image/input_bg.gif") repeat-x;
+}
+
+.L_text_b {
+    width: 326px;
+    height: 20px;
+    line-height: 20px;
+    border: 1px solid #dbdbdb;
+    background: url("image/input_bg.gif") repeat-x;
+}
+
+.search_btn {
+    width: 68px;
+    height: 26px;
+    background: url("image/search_btn.gif") no-repeat;
+    cursor: pointer;
+    border: 0 none;
+    color: #ffffff;
+}
+
+.search_btn_l {
+    width: 95px;
+    height: 26px;
+    background: url("image/search_btn_l.gif") no-repeat;
+    cursor: pointer;
+    border: 0 none;
+    color: #ffffff;
+}
+
+.search_list {
+    width: 950px;
+    height: 9px;
+    background: url("image/search_list.gif") no-repeat left bottom;
+    float: left;
+    cursor: pointer;
+    margin-top: 5px;
+    margin-bottom: 3px;
+}
+
+.L_table_title {
+    width: 950px;
+    margin-bottom: 7px;
+    float: left;
+    margin-top: 6px;
+}
+
+.L_table_title h3 {
+    font-weight: bold;
+    margin-left: 25px;
+}
+
+.L_content table {
+    width: 950px;
+    border-top: 1px solid #cfe4ff;
+    border-left: 1px solid #cfe4ff;
+    border-right: 1px solid #cfe4ff;
+    float: left;
+}
+
+.L_content table thead {
+    background: #ebf4ff;
+    border-bottom: 1px solid #aec7e5;
+}
+
+.L_content table th {
+    font-weight: bold;
+}
+
+.L_content table th, .L_content table td {
+    height: 27px;
+    text-indent: 11px;
+}
+
+.L_content table td {
+    border-bottom: 1px solid #cfe4ff;
+}
+
+.L_content table td a {
+    text-decoration: none;
+}
+
+.L_content table td a:hover {
+    color: #ff4e00;
+}
+
+.L_ye {
+    width: 948px;
+    height: 27px;
+    line-height: 27px;
+    background: #f6faff;
+    border-left: 1px solid #cfe4ff;
+    border-right: 1px solid #cfe4ff;
+    border-bottom: 1px solid #cfe4ff;
+    margin-bottom: 20px;
+    float: left;
+}
+
+.L_ye div {
+    float: right;
+    margin-right: 12px;
+}
+
+.L_ye div a {
+    color: #333333;
+    text-decoration: none;
+}
+
+.D_text_a {
+    width: 163px;
+    height: 20px;
+    line-height: 20px;
+    border: 1px solid #dbdbdb;
+    background: url("image/input_bg.gif") repeat-x;
+}
+
+.D_text_b {
+    width: 326px;
+    height: 20px;
+    line-height: 20px;
+    border: 1px solid #dbdbdb;
+    background: url("image/input_bg.gif") repeat-x;
+}
+
+.D_text_c {
+    width: 75px;
+    height: 20px;
+    line-height: 20px;
+    border: 1px solid #dbdbdb;
+    background: url("image/input_bg.gif") repeat-x;
+}
+
+.D_text_d {
+    width: 550px;
+    height: 80px;
+    line-height: 20px;
+    border: 1px solid #dbdbdb;
+    background: url("image/input_bg.gif") repeat-x;
+    margin: 5px 0;
+    overflow: auto;
+}
+
+.D_text_e {
+    width: 50px;
+    height: 20px;
+    line-height: 20px;
+    border: 1px solid #dbdbdb;
+    background: url("image/input_bg.gif") repeat-x;
+}
+
+.D_text_f {
+    width: 155px;
+    height: 20px;
+    line-height: 20px;
+    border: 1px solid #dbdbdb;
+    background: url("image/input_bg.gif") repeat-x;
+}
+
+.search_plus {
+    background: url("image/search_plus.gif") no-repeat;
+    width: 14px;
+    height: 15px;
+    border: 0 none;
+    cursor: pointer;
+}
+
+.search li input[type="checkbox"] {
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.ztree {
+    height: 330px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.ckxx {
+    width: 67px;
+    height: 22px;
+    border: 0 none;
+    color: #005cc6;
+    cursor: pointer;
+    background: url("image/index_05.gif") no-repeat;
+}

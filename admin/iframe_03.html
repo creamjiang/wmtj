@@ -1,0 +1,181 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>浙江省外经贸运行调查监测系统</title>
+    <link rel="stylesheet" href="../style/reset.css" />
+    <link rel="stylesheet" href="../style/base.css" />
+    <link rel="stylesheet" href="../style/header.css" />
+    <link rel="stylesheet" href="../style/detail.css" />
+    <link rel="stylesheet" href="../style/list.css" />
+    <link rel="stylesheet" href="../style/search.css" />
+    <link rel="stylesheet" href="../ui/zTree/css/zTreeStyle/zTreeStyle.css" />
+    <style type="text/css">
+        form {
+            overflow: hidden;
+        }
+
+        .L_content table {
+            width: 728px;
+        }
+
+        .L_content {
+            width: 728px;
+            overflow: hidden;
+        }
+
+        .L_ye {
+            width: 726px;
+        }
+
+        .iframe_div {
+            width: 730px;
+            margin-top: 7px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+<form target="_blank" action="#">
+    <div class="D_title"><span>分规模</span></div>
+    <div class="search">
+        <ul>
+            <li><label>起始时间：</label><input type="text" class="D_text_f" /></li>
+            <li><label>截至时间：</label><input type="text" class="D_text_f" /></li>
+            <li>
+                <label>企业规模：</label>
+                <select class="D_text_f">
+                    <option>请选择</option>
+                    <option>500万以下</option>
+                    <option>500万——1500万</option>
+                    <option>1500万——5000万</option>
+                    <option>500万——5000万</option>
+                    <option>5000万以上</option>
+                </select>
+            </li>
+        </ul>
+    </div>
+    <div class="search_b">
+        <input type="submit" class="search_btn" value="查 询" />
+    </div>
+</form>
+<div class="iframe_div">
+    <div class="D_table_t"><h2>参与本次统计的企业总数共<span class="blue">(90)</span>家</h2></div>
+    <div id="container" style="width:730px; height: 300px; float: left;"></div>
+    <div class="L_content">
+        <table>
+            <thead>
+            <tr>
+                <th>企业规模</th>
+                <th>同比增长的企业占比</th>
+                <th>同比持平的企业占比</th>
+                <th>同比下降的企业占比</th>
+                <th>出口订单景气指数</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>500万以下</td>
+                <td>31.2</td>
+                <td>39.7</td>
+                <td>29.1</td>
+                <td>102.10</td>
+            </tr>
+            <tr>
+                <td>500万——1500万</td>
+                <td>30.5</td>
+                <td>38.6</td>
+                <td>30.9</td>
+                <td>99.60</td>
+            </tr>
+            <tr>
+                <td>1500万——5000万</td>
+                <td>32.5</td>
+                <td>38.3</td>
+                <td>29.2</td>
+                <td>103.30</td>
+            </tr>
+            <tr>
+                <td>500万——5000万</td>
+                <td>33</td>
+                <td>37.5</td>
+                <td>29.5</td>
+                <td>103.50</td>
+            </tr>
+            <tr>
+                <td>5000万以上</td>
+                <td>30.5</td>
+                <td>38.6</td>
+                <td>30.9</td>
+                <td>99.60</td>
+            </tr>
+            </tbody>
+        </table>
+        <div class="L_ye"></div>
+    </div>
+    <div class="D_submit D_submit_3">
+        <input type="submit" class="red_btn" value="导出" />
+        <input type="button" class="green_btn" value="打印预览" />
+        <input type="button" class="green_btn" value="打印" />
+    </div>
+</div>
+<script type="text/javascript" src="../ui/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="../ui/highcharts/highcharts.js"></script>
+<script type="text/javascript" src="../ui/highcharts/exporting.js"></script>
+<script type="text/javascript">
+    (function ($) {
+        //当期月报上报率
+        $('#container').highcharts({
+            chart: {
+                type: 'column'
+            },
+            credits: {
+                enabled: false
+            },
+            title: {
+                text: ''
+            },
+            subtitle: {
+                text: ''
+            },
+            xAxis: {
+                categories: ['500万以下', '500万——1500万', '1500万——5000万', '500万——5000万', '5000万以上']
+            },
+            yAxis: {
+                min: 0,
+                title: {
+                    text: ''
+                }
+            },
+            tooltip: {
+                valueSuffix: '%'
+            },
+            plotOptions: {
+                column: {
+                    pointPadding: 0.2,
+                    borderWidth: 0
+                }
+            },
+            series: [
+                {
+                    name: '同比增长的企业占比',
+                    data: [31.2, 30.5, 32.5, 33, 22.5]
+                },
+                {
+                    name: '同比持平的企业占比',
+                    data: [39.7, 38.6, 38.3, 37.5, 32.1]
+                },
+                {
+                    name: '同比下降的企业占比',
+                    data: [29.1, 30.9, 29.2, 29.5, 28.5]
+                },
+                {
+                    name: '出口订单景气指数',
+                    data: [102.10, 99.60, 103.30, 103.50, 99.8]
+                }
+            ]
+        });
+    })(jQuery);
+</script>
+</body>
+</html>

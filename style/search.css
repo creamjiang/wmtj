@@ -1,0 +1,70 @@
+.S_left {
+    width: 215px;
+    float: left;
+    margin-bottom: 10px;
+}
+
+.ztree {
+    border-left: 1px solid #cccccc;
+    border-right: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
+    width: 204px;
+}
+
+.tree_top {
+    width: 214px;
+    height: 27px;
+    line-height: 27px;
+    background: url("image/index_01.gif") repeat-x;
+    border-right: 1px solid #cccccc;
+    border-left: 1px solid #cccccc;
+}
+
+.tree_top i {
+    border: 3px solid transparent;
+    border-left-color: #0e73b0;
+    height: 0;
+    width: 0;
+    float: left;
+    margin-top: 13px;
+    display: block;
+    margin-left: 17px;
+}
+
+.tree_top span {
+    color: #0e73b0;
+    font-weight: bold;
+    margin-left: 7px;
+    line-height: 27px;
+}
+
+.S_right {
+    margin-left: 5px;
+    width: 730px;
+    float: left;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.D_title {
+    width: auto;
+    border-right: 1px solid #cccccc;
+}
+
+.search ul {
+    width: 730px;
+}
+
+.search_b {
+    width: 68px;
+    margin: 0 auto;
+}
+
+.search_b .search_btn {
+    float: none;
+    margin-top: 10px;
+}
+
+.search {
+    width: 730px;
+}

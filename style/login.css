@@ -1,0 +1,93 @@
+.wrapper {
+    width: 950px;
+    margin: 0 auto;
+}
+
+.login_left {
+    background: url("image/login_01.jpg") no-repeat;
+    width: 630px;
+    height: 555px;
+    float: left;
+}
+
+.login_right {
+    background: url("image/login_02.jpg") no-repeat;
+    width: 320px;
+    height: 555px;
+    float: left;
+}
+
+.login_input {
+    position: relative;
+}
+
+.login_input ul {
+    position: absolute;
+    top: 127px;
+    left: 15px;
+}
+
+.login_input .I_text li {
+    margin-bottom: 27px;
+    *margin-bottom: 25px !important;
+    width: 230px;
+    float: left;
+}
+
+.login_input label {
+    font-size: 14px;
+    width: 75px;
+    text-align: right;
+    float: left;
+}
+
+.login_input .username, .login_input .password {
+    width: 151px;
+    height: 21px;
+    border: 1px solid #80a5c4;
+}
+
+.login_input .pass_img {
+    width: 63px;
+    height: 21px;
+    border: 1px solid #80a5c4;
+    text-align: center;
+    float: left;
+}
+
+.login_input img {
+    float: left;
+    margin-left: 6px;
+    cursor: pointer;
+}
+
+.login_input .submit {
+    background: url("image/login_04.jpg") no-repeat;
+    width: 108px;
+    height: 32px;
+    border: 0 none;
+    cursor: pointer;
+    color: #893601;
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 75px;
+}
+
+.login_input .login_text {
+    position: absolute;
+    top: 365px;
+    left: 30px;
+}
+
+.login_text li{
+    line-height: 24px;
+}
+
+.login_input .login_text a {
+    color: #333333;
+    text-decoration: none;
+}
+
+.login_input .login_text a:hover {
+    color: #ff3300;
+}

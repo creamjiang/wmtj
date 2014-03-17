@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>浙江省外经贸运行调查监测系统</title>
+    <link rel="stylesheet" href="../style/reset.css" />
+    <link rel="stylesheet" href="../style/base.css" />
+    <link rel="stylesheet" href="../style/header.css" />
+    <link rel="stylesheet" href="../style/detail.css" />
+    <link rel="stylesheet" href="../style/list.css" />
+    <link rel="stylesheet" href="../ui/zTree/css/zTreeStyle/zTreeStyle.css" />
+    <link rel="stylesheet" href="../style/jbqk.css" />
+    <style type="text/css">
+        .D_table td.D_td_t {
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+
+    <!--# include file="header.html" -->
+
+    <form action="#">
+        <div class="D_content">
+            <div class="D_title"><span>易错数据管理</span></div>
+            <table class="D_table qyzyywxx">
+                <tr>
+                    <td class="D_td_t">
+                        <span class="D_q D_q_right">将 <span class="red">“在手订单大于200%的海关数据”</span> 应用到：</span>
+                    </td>
+                    <td colspan="2">
+                        <label>地区：</label><input type="text" class="D_text_a" id="citySel" onclick="showMenu();" />
+                    </td>
+                    <td colspan="2">
+                        <label>期数：</label><input type="text" class="D_text_a" />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="5"><span class="red">*提示： 选择部门, 然后点击检错按钮来检索符合条件的企业。</span></td>
+                </tr>
+            </table>
+            <div class="D_submit D_submit_1">
+                <input type="button" class="red_btn" value="检 查" onclick="window.location.href='list_34.html'" />
+            </div>
+        </div>
+    </form>
+
+    <!--# include file="footer.html" -->
+
+</div>
+<script type="text/javascript" src="../ui/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="../js/base.js"></script>
+<script type="text/javascript" src="../ui/zTree/js/jquery.ztree.core-3.5.min.js"></script>
+<script type="text/javascript">
+    var setting = {
+        view: {
+            dblClickExpand: false
+        },
+        data: {
+            simpleData: {
+                enable: true
+            }
+        },
+        callback: {
+            beforeClick: beforeClick,
+            onClick: onClick
+        }
+    };
+
+    var zNodes = [
+        { id: 1, pId: 0, name: "浙江省", open: true},
+        { id: 21, pId: 1, name: "杭州市", open: true},
+        { id: 211, pId: 21, name: "上城"},
+        { id: 22, pId: 1, name: "宁波市", open: false},
+        { id: 221, pId: 22, name: "汇总"},
+        { id: 23, pId: 1, name: "温州市", open: false},
+        { id: 231, pId: 23, name: "汇总"},
+        { id: 24, pId: 1, name: "嘉兴市", open: false},
+        { id: 241, pId: 24, name: "汇总"},
+        { id: 25, pId: 1, name: "湖州市", open: false},
+        { id: 251, pId: 25, name: "汇总"},
+        { id: 26, pId: 1, name: "绍兴市", open: false},
+        { id: 261, pId: 26, name: "汇总"},
+        { id: 27, pId: 1, name: "金华市", open: false},
+        { id: 271, pId: 27, name: "汇总"},
+        { id: 28, pId: 1, name: "衢州市", open: false},
+        { id: 281, pId: 28, name: "汇总"},
+        { id: 29, pId: 1, name: "舟山市", open: false},
+        { id: 291, pId: 29, name: "汇总"},
+        { id: 30, pId: 1, name: "台州市", open: false},
+        { id: 301, pId: 30, name: "汇总"},
+        { id: 31, pId: 1, name: "丽水市", open: false},
+        { id: 311, pId: 31, name: "汇总"}
+    ];
+
+    function beforeClick(treeId, treeNode) {
+        var check = (treeNode && !treeNode.isParent);
+        if (!check) alert("只能选择城市...");
+        return check;
+    }
+
+    function onClick(e, treeId, treeNode) {
+        var zTree = $.fn.zTree.getZTreeObj("treeDemo"),
+                nodes = zTree.getSelectedNodes(),
+                v = "";
+        nodes.sort(function compare(a, b) {
+            return a.id - b.id;
+        });
+        for (var i = 0, l = nodes.length; i < l; i++) {
+            v += nodes[i].name + ",";
+        }
+        if (v.length > 0) v = v.substring(0, v.length - 1);
+        var cityObj = $("#citySel");
+        cityObj.attr("value", v);
+    }
+
+    function showMenu() {
+        var cityObj = $("#citySel");
+        var cityOffset = $("#citySel").offset();
+        $("#menuContent").css({left: cityOffset.left + "px", top: cityOffset.top + cityObj.outerHeight() + "px"}).slideDown("fast");
+
+        $("body").bind("mousedown", onBodyDown);
+    }
+    function hideMenu() {
+        $("#menuContent").fadeOut("fast");
+        $("body").unbind("mousedown", onBodyDown);
+    }
+    function onBodyDown(event) {
+        if (!(event.target.id == "menuBtn" || event.target.id == "menuContent" || $(event.target).parents("#menuContent").length > 0)) {
+            hideMenu();
+        }
+    }
+
+    $(document).ready(function () {
+        $.fn.zTree.init($("#treeDemo"), setting, zNodes);
+    });
+</script>
+<div id="menuContent" class="menuContent" style="display:none; position: absolute;">
+    <ul id="treeDemo" class="ztree" style="margin-top:0; width:160px;"></ul>
+</div>
+</body>
+</html>

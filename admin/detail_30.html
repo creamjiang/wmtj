@@ -1,0 +1,159 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>浙江省外经贸运行调查监测系统</title>
+    <link rel="stylesheet" href="../style/reset.css" />
+    <link rel="stylesheet" href="../style/base.css" />
+    <link rel="stylesheet" href="../style/header.css" />
+    <link rel="stylesheet" href="../style/detail.css" />
+    <link rel="stylesheet" href="../ui/zTree/css/zTreeStyle/zTreeStyle.css" />
+    <link rel="stylesheet" href="../style/list.css" />
+</head>
+<body>
+<div class="wrapper">
+
+    <!--# include file="header.html" -->
+
+    <form action="#">
+        <div class="D_content">
+            <div class="D_title"><span>编辑月报</span></div>
+            <table class="D_table qyzyywxx">
+                <tr>
+                    <td class="D_td_t"><span class="D_q">问卷名称：</span></td>
+                    <td colspan="2"><input type="text" class="D_text_b" /></td>
+                    <td class="D_td_b"></td>
+                    <td class="D_td_b"></td>
+                </tr>
+                <tr>
+                    <td class="D_td_t"><span class="D_q">开始时间：</span></td>
+                    <td colspan="2" class="D_td_b"><input type="text" class="D_text_b" /></td>
+                    <td class="D_td_b"></td>
+                    <td class="D_td_b"></td>
+                </tr>
+                <tr>
+                    <td class="D_td_t"><span class="D_q">截至时间：</span></td>
+                    <td colspan="2" class="D_td_b"><input type="text" class="D_text_b" /></td>
+                    <td class="D_td_b"></td>
+                    <td class="D_td_b"></td>
+                </tr>
+                <tr>
+                    <td class="D_td_t"><span class="D_q">期    数：</span></td>
+                    <td colspan="2" class="D_td_b"><input type="text" class="D_text_b" /></td>
+                    <td class="D_td_b"></td>
+                    <td class="D_td_b"></td>
+                </tr>
+                <tr>
+                    <td class="D_td_t"><span class="D_q">状    态：</span></td>
+                    <td class="D_td_b">
+                        <select class="D_text_a">
+                            <option>请选择</option>
+                            <option>开启</option>
+                            <option>关闭</option>
+                        </select>
+                    </td>
+                    <td class="D_td_b"></td>
+                    <td class="D_td_b"></td>
+                    <td class="D_td_b"></td>
+                </tr>
+            </table>
+            <div class="D_submit D_submit_1">
+                <input type="button" class="red_btn" value="编 辑" />
+            </div>
+        </div>
+    </form>
+
+    <!--# include file="footer.html" -->
+
+</div>
+<script type="text/javascript" src="../ui/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="../js/base.js"></script>
+<script type="text/javascript" src="../js/jbqk.js"></script>
+<script type="text/javascript" src="../ui/zTree/js/jquery.ztree.core-3.5.min.js"></script>
+<script type="text/javascript" src="../ui/zTree/js/jquery.ztree.excheck-3.5.min.js"></script>
+<script type="text/javascript">
+    var setting = {
+        check: {
+            enable: true,
+            chkboxType: {"Y": "", "N": ""}
+        },
+        view: {
+            dblClickExpand: false
+        },
+        data: {
+            simpleData: {
+                enable: true
+            }
+        },
+        callback: {
+            beforeClick: beforeClick,
+            onCheck: onCheck
+        }
+    };
+
+    var zNodes = [
+        {id: 1, pId: 0, name: "北京"},
+        {id: 2, pId: 0, name: "天津"},
+        {id: 3, pId: 0, name: "上海"},
+        {id: 6, pId: 0, name: "重庆"},
+        {id: 4, pId: 0, name: "河北省", open: true, nocheck: true},
+        {id: 41, pId: 4, name: "石家庄"},
+        {id: 42, pId: 4, name: "保定"},
+        {id: 43, pId: 4, name: "邯郸"},
+        {id: 44, pId: 4, name: "承德"},
+        {id: 5, pId: 0, name: "广东省", open: true, nocheck: true},
+        {id: 51, pId: 5, name: "广州"},
+        {id: 52, pId: 5, name: "深圳"},
+        {id: 53, pId: 5, name: "东莞"},
+        {id: 54, pId: 5, name: "佛山"},
+        {id: 6, pId: 0, name: "福建省", open: true, nocheck: true},
+        {id: 61, pId: 6, name: "福州"},
+        {id: 62, pId: 6, name: "厦门"},
+        {id: 63, pId: 6, name: "泉州"},
+        {id: 64, pId: 6, name: "三明"}
+    ];
+
+    function beforeClick(treeId, treeNode) {
+        var zTree = $.fn.zTree.getZTreeObj("treeDemo");
+        zTree.checkNode(treeNode, !treeNode.checked, null, true);
+        return false;
+    }
+
+    function onCheck(e, treeId, treeNode) {
+        var zTree = $.fn.zTree.getZTreeObj("treeDemo"),
+                nodes = zTree.getCheckedNodes(true),
+                v = "";
+        for (var i = 0, l = nodes.length; i < l; i++) {
+            v += nodes[i].name + ",";
+        }
+        if (v.length > 0) v = v.substring(0, v.length - 1);
+        var cityObj = $("#citySel");
+        cityObj.attr("value", v);
+    }
+
+    function showMenu() {
+        var cityObj = $("#citySel");
+        var cityOffset = $("#citySel").offset();
+        $("#menuContent").css({left: cityOffset.left + "px", top: cityOffset.top + cityObj.outerHeight() + "px"}).slideDown("fast");
+
+        $("body").bind("mousedown", onBodyDown);
+    }
+    function hideMenu() {
+        $("#menuContent").fadeOut("fast");
+        $("body").unbind("mousedown", onBodyDown);
+    }
+    function onBodyDown(event) {
+        if (!(event.target.id == "menuBtn" || event.target.id == "citySel" || event.target.id == "menuContent" || $(event.target).parents("#menuContent").length > 0)) {
+            hideMenu();
+        }
+    }
+
+    $(document).ready(function () {
+        $.fn.zTree.init($("#treeDemo"), setting, zNodes);
+    });
+</script>
+<div id="menuContent" class="menuContent" style="display:none; position: absolute;">
+    <ul id="treeDemo" class="ztree" style="margin-top:0; width:160px;"></ul>
+</div>
+</body>
+</html>

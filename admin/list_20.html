@@ -1,0 +1,219 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>浙江省外经贸运行调查监测系统</title>
+    <link rel="stylesheet" href="../style/reset.css" />
+    <link rel="stylesheet" href="../style/base.css" />
+    <link rel="stylesheet" href="../style/header.css" />
+    <link rel="stylesheet" href="../style/list.css" />
+    <link rel="stylesheet" href="../ui/zTree/css/zTreeStyle/zTreeStyle.css" />
+</head>
+<body>
+<div class="wrapper">
+
+    <!--# include file="header.html" -->
+
+    <div class="L_content">
+        <div class="L_title"><h2>已审核企业</h2></div>
+        <form action="#">
+            <div class="search">
+                <ul>
+                    <li>
+                        <label>年份：</label>
+                        <select class="D_text_f">
+                            <option>请选择</option>
+                            <option>2013年</option>
+                            <option>2012年</option>
+                        </select>
+                    </li>
+                    <li><label>企业名称：</label>
+                        <input type="text" class="D_text_f" />
+                    </li>
+                    <li><label>海关编码：</label>
+                        <input type="text" class="D_text_f" />
+                    </li>
+                    <li><label>管理机构：</label>
+                        <input type="text" class="D_text_f" id="citySel" onclick="showMenu();" />
+                    </li>
+                </ul>
+                <ul>
+                    <li><label>是否本级：</label>
+                        <select class="D_text_f">
+                            <option>请选择</option>
+                            <option>是</option>
+                            <option>否</option>
+                        </select>
+                    </li>
+                    <li>
+                        <label>状态：</label>
+                        <select class="D_text_f">
+                            <option>请选择</option>
+                            <option>已审核</option>
+                            <option>未审核</option>
+                            <option>已退回</option>
+                        </select>
+                    </li>
+                    <li>
+                        <label>统计级别：</label>
+                        <select class="D_text_f">
+                            <option>请选择</option>
+                            <option>全部</option>
+                            <option>省级</option>
+                            <option>县市级</option>
+                        </select>
+                    </li>
+                    <li><input type="submit" class="search_btn" value="查 询" /></li>
+                </ul>
+            </div>
+        </form>
+        <div class="search_list"></div>
+        <div class="L_content">
+            <table>
+                <thead>
+                <tr>
+                    <th>企业海关编码</th>
+                    <th>企业名称</th>
+                    <th>录入时间</th>
+                    <th>管理机构</th>
+                    <th>状态</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>3302240203</td>
+                    <td><a target="_blank" href="detail_20.html">宁波申洲针织有限公司</a></td>
+                    <td>2013-08-27</td>
+                    <td>北仑开发区</td>
+                    <td>已审核</td>
+                </tr>
+                <tr>
+                    <td>3302240203</td>
+                    <td><a target="_blank" href="detail_20.html">百事高五金机械制造（浙江）有限公司</a></td>
+                    <td>2013-08-27</td>
+                    <td>北仑开发区</td>
+                    <td>已审核</td>
+                </tr>
+                <tr>
+                    <td>3302240203</td>
+                    <td><a target="_blank" href="detail_20.html">宁波申洲针织有限公司</a></td>
+                    <td>2013-08-27</td>
+                    <td>北仑开发区</td>
+                    <td>已审核</td>
+                </tr>
+                <tr>
+                    <td>3302240203</td>
+                    <td><a target="_blank" href="detail_20.html">宁波申洲针织有限公司</a></td>
+                    <td>2013-08-27</td>
+                    <td>北仑开发区</td>
+                    <td>已审核</td>
+                </tr>
+                <tr>
+                    <td>3302240203</td>
+                    <td><a target="_blank" href="detail_20.html">宁波申洲针织有限公司</a></td>
+                    <td>2013-08-27</td>
+                    <td>北仑开发区</td>
+                    <td>已审核</td>
+                </tr>
+                </tbody>
+            </table>
+            <div class="L_ye">
+                <div>每页20条，共 3 页， 58 条，当前第 页 首 页 | 上一页 | 下一页 | 尾页</div>
+            </div>
+        </div>
+    </div>
+
+    <!--# include file="footer.html" -->
+</div>
+<script type="text/javascript" src="../ui/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="../js/base.js"></script>
+<script type="text/javascript" src="../ui/zTree/js/jquery.ztree.core-3.5.min.js"></script>
+<script type="text/javascript">
+    var setting = {
+        view: {
+            dblClickExpand: false
+        },
+        data: {
+            simpleData: {
+                enable: true
+            }
+        },
+        callback: {
+            beforeClick: beforeClick,
+            onClick: onClick
+        }
+    };
+
+    var zNodes = [
+        { id: 1, pId: 0, name: "浙江省", open: true},
+        { id: 21, pId: 1, name: "杭州市", open: true},
+        { id: 211, pId: 21, name: "上城"},
+        { id: 22, pId: 1, name: "宁波市", open: false},
+        { id: 221, pId: 22, name: "汇总"},
+        { id: 23, pId: 1, name: "温州市", open: false},
+        { id: 231, pId: 23, name: "汇总"},
+        { id: 24, pId: 1, name: "嘉兴市", open: false},
+        { id: 241, pId: 24, name: "汇总"},
+        { id: 25, pId: 1, name: "湖州市", open: false},
+        { id: 251, pId: 25, name: "汇总"},
+        { id: 26, pId: 1, name: "绍兴市", open: false},
+        { id: 261, pId: 26, name: "汇总"},
+        { id: 27, pId: 1, name: "金华市", open: false},
+        { id: 271, pId: 27, name: "汇总"},
+        { id: 28, pId: 1, name: "衢州市", open: false},
+        { id: 281, pId: 28, name: "汇总"},
+        { id: 29, pId: 1, name: "舟山市", open: false},
+        { id: 291, pId: 29, name: "汇总"},
+        { id: 30, pId: 1, name: "台州市", open: false},
+        { id: 301, pId: 30, name: "汇总"},
+        { id: 31, pId: 1, name: "丽水市", open: false},
+        { id: 311, pId: 31, name: "汇总"}
+    ];
+
+    function beforeClick(treeId, treeNode) {
+        var check = (treeNode && !treeNode.isParent);
+        if (!check) alert("只能选择城市...");
+        return check;
+    }
+
+    function onClick(e, treeId, treeNode) {
+        var zTree = $.fn.zTree.getZTreeObj("treeDemo"),
+                nodes = zTree.getSelectedNodes(),
+                v = "";
+        nodes.sort(function compare(a, b) {
+            return a.id - b.id;
+        });
+        for (var i = 0, l = nodes.length; i < l; i++) {
+            v += nodes[i].name + ",";
+        }
+        if (v.length > 0) v = v.substring(0, v.length - 1);
+        var cityObj = $("#citySel");
+        cityObj.attr("value", v);
+    }
+
+    function showMenu() {
+        var cityObj = $("#citySel");
+        var cityOffset = $("#citySel").offset();
+        $("#menuContent").css({left: cityOffset.left + "px", top: cityOffset.top + cityObj.outerHeight() + "px"}).slideDown("fast");
+
+        $("body").bind("mousedown", onBodyDown);
+    }
+    function hideMenu() {
+        $("#menuContent").fadeOut("fast");
+        $("body").unbind("mousedown", onBodyDown);
+    }
+    function onBodyDown(event) {
+        if (!(event.target.id == "menuBtn" || event.target.id == "menuContent" || $(event.target).parents("#menuContent").length > 0)) {
+            hideMenu();
+        }
+    }
+
+    $(document).ready(function () {
+        $.fn.zTree.init($("#treeDemo"), setting, zNodes);
+    });
+</script>
+<div id="menuContent" class="menuContent" style="display:none; position: absolute;">
+    <ul id="treeDemo" class="ztree" style="margin-top:0; width:160px;"></ul>
+</div>
+</body>
+</html>

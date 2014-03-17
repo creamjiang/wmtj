@@ -1,0 +1,163 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>浙江省外经贸运行调查监测系统</title>
+    <link rel="stylesheet" href="../style/reset.css" />
+    <link rel="stylesheet" href="../style/base.css" />
+    <link rel="stylesheet" href="../style/header.css" />
+    <link rel="stylesheet" href="../style/detail.css" />
+    <link rel="stylesheet" href="../style/list.css" />
+    <link rel="stylesheet" href="../style/search.css" />
+    <link rel="stylesheet" href="../ui/zTree/css/zTreeStyle/zTreeStyle.css" />
+    <style type="text/css">
+        form {
+            overflow: hidden;
+        }
+
+        .L_content table {
+            width: 728px;
+        }
+
+        .L_content {
+            width: 728px;
+            overflow: hidden;
+        }
+
+        .L_table_title {
+            width: 728px;
+            overflow: hidden;
+        }
+
+        .L_ye {
+            width: 726px;
+        }
+    </style>
+</head>
+<body>
+<form target="_blank" action="#">
+    <div class="D_title"><span>通讯录管理</span></div>
+    <div class="search">
+        <ul>
+            <li><label>姓名：</label><input type="text" class="D_text_f" /></li>
+            <li><label>用户属性：</label>
+                <select class="D_text_f">
+                    <option>请选择</option>
+                    <option>监测点</option>
+                    <option>非监测点</option>
+                </select>
+            </li>
+            <li>
+                <label>下属机构：</label><input type="text" class="D_text_f" id="citySel" onclick="showMenu();" />
+            </li>
+        </ul>
+        <ul>
+            <li><label>电话：</label><input type="text" class="D_text_f" /></li>
+            <li><label>手机：</label><input type="text" class="D_text_f" /></li>
+            <li><input type="submit" class="search_btn" value="查 询" /></li>
+        </ul>
+    </div>
+</form>
+<div class="L_content">
+    <div class="L_table_title">
+        <a class="search_btn right a_btn l_7" target="_blank" href="#">导入企业</a>
+        <a class="search_btn right a_btn" target="_blank" href="#">增加企业</a>
+    </div>
+    <table>
+        <thead>
+        <tr>
+            <th>序号</th>
+            <th>用户名</th>
+            <th>用户属性</th>
+            <th>所属管理机构</th>
+            <th>电话</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>1</td>
+            <td>浙江省工艺品进出口有限公司</td>
+            <td>非检测点</td>
+            <td>省属企业</td>
+            <td>123456789</td>
+            <td><a href="#">[编辑]</a> <a href="#">[删除]</a> <a href="#">[重置密码]</a></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>浙江省工艺品进出口有限公司</td>
+            <td>非检测点</td>
+            <td>省属企业</td>
+            <td>123456789</td>
+            <td><a href="#">[编辑]</a> <a href="#">[删除]</a> <a href="#">[重置密码]</a></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>浙江省工艺品进出口有限公司</td>
+            <td>非检测点</td>
+            <td>省属企业</td>
+            <td>123456789</td>
+            <td><a href="#">[编辑]</a> <a href="#">[删除]</a> <a href="#">[重置密码]</a></td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>浙江省工艺品进出口有限公司</td>
+            <td>非检测点</td>
+            <td>省属企业</td>
+            <td>123456789</td>
+            <td><a href="#">[编辑]</a> <a href="#">[删除]</a> <a href="#">[重置密码]</a></td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>浙江省工艺品进出口有限公司</td>
+            <td>非检测点</td>
+            <td>省属企业</td>
+            <td>123456789</td>
+            <td><a href="#">[编辑]</a> <a href="#">[删除]</a> <a href="#">[重置密码]</a></td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>浙江省工艺品进出口有限公司</td>
+            <td>非检测点</td>
+            <td>省属企业</td>
+            <td>123456789</td>
+            <td><a href="#">[编辑]</a> <a href="#">[删除]</a> <a href="#">[重置密码]</a></td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>浙江省工艺品进出口有限公司</td>
+            <td>非检测点</td>
+            <td>省属企业</td>
+            <td>123456789</td>
+            <td><a href="#">[编辑]</a> <a href="#">[删除]</a> <a href="#">[重置密码]</a></td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>浙江省工艺品进出口有限公司</td>
+            <td>非检测点</td>
+            <td>省属企业</td>
+            <td>123456789</td>
+            <td><a href="#">[编辑]</a> <a href="#">[删除]</a> <a href="#">[重置密码]</a></td>
+        </tr>
+        </tbody>
+    </table>
+    <div class="L_ye">
+        <div>每页10条，共 297 页， 2968 条，当前第
+            <input type="text" id="ToPageInput" onKeyDown="submitToPage()" style="width:40px; font-size:12px; height:15px;" value="1" />
+            页 &nbsp;
+            <a href="#" onclick="toPage(1)">&nbsp;首 页</a>
+            |
+            上一页
+            |
+            <a href="#" onclick="toPage(2)">下一页</a>
+            |
+            <a href="#" onclick="toPage(297)">尾页</a>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="../ui/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="../ui/zTree/js/jquery.ztree.core-3.5.min.js"></script>
+<script type="text/javascript" src="../js/base.js"></script>
+<!--# include file="cho_user_tree.html" -->
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>浙江省外经贸运行调查监测系统</title>
+    <link rel="stylesheet" href="../style/reset.css" />
+    <link rel="stylesheet" href="../style/base.css" />
+    <link rel="stylesheet" href="../style/header.css" />
+    <link rel="stylesheet" href="../style/detail.css" />
+    <link rel="stylesheet" href="../ui/zTree/css/zTreeStyle/zTreeStyle.css" />
+    <link rel="stylesheet" href="../ui/kindeditor/themes/default/default.css" />
+    <style type="text/css">
+        .ke-container {
+            margin-top: 7px;
+            margin-bottom: 7px;
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+
+    <!--# include file="header.html" -->
+
+    <form action="#">
+        <div class="D_content">
+            <div class="D_title"><span>信息上报</span></div>
+            <table class="D_table new_D_table qyzyywxx">
+                <tr>
+                    <td class="D_td_t"><span class="red">*</span><span class="D_q">信息标题：</span></td>
+                    <td colspan="2"><input type="text" class="D_text_b" /></td>
+                    <td class="D_td_b"></td>
+                    <td class="D_td_b"></td>
+                </tr>
+                <tr>
+                    <td class="D_td_t"><span class="red">*</span><span class="D_q">信息内容：</span></td>
+                    <td colspan="4">
+                        <textarea name="content" class="D_text_d" style="width: 740px; height: 300px;">KindEditor</textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="D_td_t"><span class="red">*</span><span class="D_q">是否公开：</span></td>
+                    <td class="D_td_b">
+                        <label><input type="radio" name="i1" />是</label>
+                        <label><input type="radio" name="i1" />否</label>
+                    </td>
+                    <td class="D_td_b"></td>
+                    <td class="D_td_b"></td>
+                    <td class="D_td_b"></td>
+                </tr>
+            </table>
+            <div class="D_submit D_submit_1">
+                <input type="submit" class="red_btn" value="发 布" />
+            </div>
+        </div>
+    </form>
+
+    <!--# include file="footer.html" -->
+
+</div>
+<script type="text/javascript" src="../ui/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="../js/base.js"></script>
+<script type="text/javascript" src="../js/jbqk.js"></script>
+<script type="text/javascript" src="../ui/kindeditor/kindeditor-min.js"></script>
+<script type="text/javascript" src="../ui/kindeditor/lang/zh_CN.js"></script>
+<script type="text/javascript">
+    (function ($) {
+        //kindeditor
+        var editor;
+        KindEditor.ready(function (K) {
+            editor = K.create('textarea[name="content"]', {
+                allowFileManager: true
+            });
+        });
+    })(jQuery);
+</script>
+</body>
+</html>

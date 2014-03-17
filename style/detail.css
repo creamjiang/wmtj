@@ -1,0 +1,376 @@
+.D_content {
+    width: 950px;
+    margin: 0 auto;
+}
+
+.D_title {
+    width: 950px;
+    height: 27px;
+    line-height: 27px;
+    background: url("image/title_950.gif") no-repeat;
+}
+
+.D_title span {
+    color: #ffffff;
+    font-weight: bold;
+    margin-left: 28px;
+}
+
+.D_table_t {
+    text-align: center;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+.D_table_t h2 {
+    display: inline;
+    font-weight: bold;
+    font-size: 16pt;
+}
+
+.D_table_t span {
+    color: #ff0000;
+    font-weight: bold;
+}
+
+.D_table {
+    border-top: 1px solid #eaeaea;
+}
+
+.D_table td {
+    height: 42px;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.D_table td.no_b {
+    width: 30px;
+    border-right: 1px solid #eaeaea;
+    vertical-align: top;
+    line-height: 30px;
+    padding-left: 0;
+    text-align: center;
+}
+
+.D_table td.D_td_t {
+    width: 260px;
+    text-align: right;
+    padding-left: 0;
+    border-right: 1px solid #eaeaea;
+}
+
+.D_table td.D_td_t_new {
+    width: 210px;
+    padding-left: 3px;
+    border-right: 1px solid #eaeaea;
+    vertical-align: top;
+}
+
+.D_table td.D_td_t_l {
+    width: 280px;
+    border-right: 1px solid #EAEAEA;
+}
+
+.D_q {
+    margin-right: 17px;
+    line-height: 30px;
+}
+
+.D_table td.D_td_b {
+    width: 165px;
+}
+
+.D_td_b label {
+    cursor: pointer;
+}
+
+table label input {
+    margin-right: 5px;
+}
+
+.D_text_a {
+    width: 163px;
+    height: 20px;
+    line-height: 20px;
+    border: 1px solid #dbdbdb;
+    background: url("image/input_bg.gif") repeat-x;
+}
+
+.D_text_b {
+    width: 326px;
+    height: 20px;
+    line-height: 20px;
+    border: 1px solid #dbdbdb;
+    background: url("image/input_bg.gif") repeat-x;
+}
+
+.D_text_c {
+    width: 75px;
+    height: 20px;
+    line-height: 20px;
+    border: 1px solid #dbdbdb;
+    background: url("image/input_bg.gif") repeat-x;
+}
+
+.D_text_d {
+    width: 550px;
+    height: 80px;
+    line-height: 20px;
+    border: 1px solid #dbdbdb;
+    background: url("image/input_bg.gif") repeat-x;
+    margin: 5px 0;
+    overflow: auto;
+}
+
+.D_text_e {
+    width: 660px;
+    height: 20px;
+    line-height: 20px;
+    border: 1px solid #dbdbdb;
+    background: url("image/input_bg.gif") repeat-x;
+}
+
+.D_text_f {
+    width: 143px;
+    height: 20px;
+    line-height: 20px;
+    border: 1px solid #dbdbdb;
+    background: url("image/input_bg.gif") repeat-x;
+}
+
+.D_submit {
+    width: 292px;
+    margin: 42px auto;
+}
+
+.D_submit_1 {
+    width: 141px;
+}
+
+.D_submit_3 {
+    width: 433px;
+}
+
+.D_submit input.green_btn {
+    width: 141px;
+    height: 44px;
+    line-height: 44px;
+    border: 0 none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffffff;
+    background: url("image/D_submit.gif") no-repeat;
+}
+
+.D_submit input.red_btn {
+    width: 141px;
+    height: 44px;
+    line-height: 44px;
+    border: 0 none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffffff;
+    background: url("image/D_button.gif") no-repeat;
+}
+
+.T_content {
+    text-indent: 2em;
+    line-height: 24px;
+    margin-bottom: 10px;
+}
+
+.tr_bg {
+    background: #ebf4ff;
+    border-bottom: 1px solid #aec7e5;
+}
+
+.D_table tr.tr_bg td {
+    height: 28px;
+}
+
+.tr_bg h3 {
+    text-indent: 2em;
+    font-weight: bold;
+}
+
+.D_table td.no_border {
+    border-bottom: 0 none;
+}
+
+.D_q_right {
+    float: right;
+    line-height: 30px;
+}
+
+.D_q_left {
+    float: left;
+    line-height: 30px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.D_tips {
+    margin-left: 6px;
+    margin-right: 6px;
+    cursor: pointer;
+}
+
+.c_p {
+    cursor: pointer;
+}
+
+.search_plus {
+    background: url("image/search_plus.gif") no-repeat;
+    width: 14px;
+    height: 15px;
+    border: 0 none;
+    cursor: pointer;
+}
+
+.search_m {
+    background: url("image/search_m.gif") no-repeat;
+    width: 16px;
+    height: 16px;
+    border: 0 none;
+    cursor: pointer;
+}
+
+.new_D_table td.D_td_t {
+    width: 190px;
+}
+
+.new_D_table td.D_td_b {
+    width: 190px;
+}
+
+.jbqk {
+    border-left: 1px solid #eaeaea;
+    width: 100%;
+}
+
+.jbqk td {
+    border-right: 1px solid #eaeaea;
+    width: 166px;
+}
+
+.jbqk td.D_td_t {
+    width: 148px;
+}
+
+.qyzyywxx {
+    border-left: 1px solid #eaeaea;
+    border-right: 1px solid #eaeaea;
+    width: 100%;
+}
+
+.qyzyywxx td {
+    padding-left: 10px;
+}
+
+.div_table {
+    border-top: 1px solid #0e73b0;
+    border-right: 1px solid #0e73b0;
+    border-left: 1px solid #0e73b0;
+}
+
+.div_table_bottom {
+    border-bottom: 1px solid #0e73b0;
+}
+
+.table_8 {
+    width: 100%;
+}
+
+.table_8 td {
+    line-height: 42px;
+    border-right: 1px solid #EAEAEA;
+}
+
+.table_8 td input {
+    margin-left: 5px;
+}
+
+.D_time {
+    width: 950px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    background: #f3f3f3;
+    margin-bottom: 9px;
+}
+
+.D_time span {
+    margin: 0 12px;
+}
+
+.time_text {
+    width: 950px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    background: #f0f0f0;
+    margin-bottom: 7px;
+    color: #666666;
+}
+
+.time_text span {
+    margin: 0 12px;
+}
+
+.fujian {
+    margin-left: 50px;
+    margin-bottom: 10px;
+    float: left;
+}
+
+.fujian dt, .fujian dd {
+    float: left;
+}
+
+.zxfu {
+    border-top: 1px solid #9fdbff;
+    border-left: 1px solid #9fdbff;
+}
+
+.zxfu td {
+    border-right: 1px solid #9fdbff;
+    border-bottom: 1px solid #9fdbff;
+    padding: 11px;
+    line-height: 24px;
+}
+
+.zxfu_title {
+    background: none repeat scroll 0 0 #f7fcff;
+    height: 24px;
+    line-height: 24px;
+    margin-bottom: 7px;
+}
+
+.zxfu_title p {
+    float: left;
+    width: 130px;
+}
+
+.hgdm_list {
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.hgdm_list_c {
+    margin-top: -13px;
+    *margin-top: -15px !important;
+    margin-bottom: 12px;
+}
+
+.hgdm_list li {
+    position: relative;
+}
+
+.hgdm_list li input[type="button"] {
+    position: absolute;
+    top: 4px;
+    right: 18px;
+}

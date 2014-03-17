@@ -1,0 +1,383 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>浙江省外经贸运行调查监测系统</title>
+    <link rel="stylesheet" href="../style/reset.css" />
+    <link rel="stylesheet" href="../style/base.css" />
+    <link rel="stylesheet" href="../style/header.css" />
+    <link rel="stylesheet" href="../style/detail.css" />
+    <link rel="stylesheet" href="../style/list.css" />
+    <link rel="stylesheet" href="../style/search.css" />
+    <style type="text/css">
+        form {
+            overflow: hidden;
+        }
+
+        .L_content table, .L_content {
+            width: 730px;
+        }
+
+        .L_ye {
+            width: 728px;
+        }
+
+        .iframe_div {
+            width: 730px;
+            margin-top: 7px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+<form action="#">
+    <div class="D_title"><span>汇总</span></div>
+    <div class="search">
+        <ul>
+            <li>
+                <label>开始时间：</label>
+                <input type="text" class="D_text_f" id="d4321" onFocus="WdatePicker({maxDate:'#F{$dp.$D(\'d4322\',{d:-3});}',dateFmt:'yyyy年MM月'})" />
+            </li>
+            <li>
+                <label>结束时间：</label>
+                <input type="text" class="D_text_f" id="d4322" onFocus="WdatePicker({minDate:'#F{$dp.$D(\'d4321\',{d:3});}',dateFmt:'yyyy年MM月'})" />
+            </li>
+            <li>
+                <label>下属机构：</label>
+                <select class="D_text_f">
+                    <option>请选择</option>
+                    <option>杭州市</option>
+                    <option>宁波市</option>
+                </select>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <label>企业类型：</label>
+                <select class="D_text_f">
+                    <option>请选择</option>
+                    <option>流通型</option>
+                    <option>生产型</option>
+                    <option>其他</option>
+                </select>
+            </li>
+            <li>
+                <label>出口商品：</label>
+                <select class="D_text_f">
+                    <option>请选择</option>
+                    <option>机电</option>
+                    <option>纺织服装</option>
+                    <option>轻工</option>
+                    <option>其他</option>
+                </select>
+            </li>
+            <li>
+                <label>贸易方式：</label>
+                <select class="D_text_f">
+                    <option>请选择</option>
+                    <option>一般贸易</option>
+                    <option>加工贸易</option>
+                    <option>其他</option>
+                </select>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <label>企业规模：</label>
+                <input type="text" class="D_text_e" />-<input type="text" class="D_text_e" /> 万美元
+            </li>
+            <li>
+                <label>统计级别：</label><select class="D_text_f">
+                <option>请选择</option>
+                <option>省级</option>
+                <option>全部</option>
+            </select>
+            </li>
+            <li></li>
+        </ul>
+    </div>
+    <div class="search_b">
+        <input type="submit" class="search_btn" value="查 询" />
+    </div>
+</form>
+<div class="iframe_div">
+    <div class="D_table_t"><h2>参与本次统计的企业总数共<span class="blue">(36)</span>家</h2></div>
+    <div id="container" style="width:730px; height: 500px; float: left;"></div>
+    <div class="L_content">
+        <table>
+            <thead>
+            <tr>
+                <th>月份</th>
+                <th>同比增长的企业占比</th>
+                <th>同比持平的企业占比</th>
+                <th>同比下降的企业占比</th>
+                <th>出口订单景气指数</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>2013年1月</td>
+                <td>31.2</td>
+                <td>39.7</td>
+                <td>29.1</td>
+                <td>102.10</td>
+            </tr>
+            <tr>
+                <td>2013年2月</td>
+                <td>30.5</td>
+                <td>38.6</td>
+                <td>30.9</td>
+                <td>99.60</td>
+            </tr>
+            <tr>
+                <td>2013年3月</td>
+                <td>32.5</td>
+                <td>38.3</td>
+                <td>29.2</td>
+                <td>103.30</td>
+            </tr>
+            <tr>
+                <td>2013年4月</td>
+                <td>33</td>
+                <td>37.5</td>
+                <td>29.5</td>
+                <td>103.50</td>
+            </tr>
+            <tr>
+                <td>2013年5月</td>
+                <td>30.7</td>
+                <td>37.4</td>
+                <td>31.9</td>
+                <td>98.80</td>
+            </tr>
+            <tr>
+                <td>2013年6月</td>
+                <td>31.2</td>
+                <td>37.8</td>
+                <td>31</td>
+                <td>100.20</td>
+            </tr>
+            <tr>
+                <td>2013年7月</td>
+                <td>30.2</td>
+                <td>37.2</td>
+                <td>32.6</td>
+                <td>97.60</td>
+            </tr>
+            <tr>
+                <td>2013年8月</td>
+                <td>31</td>
+                <td>37.9</td>
+                <td>31.1</td>
+                <td>99.90</td>
+            </tr>
+            <tr>
+                <td>2013年9月</td>
+                <td>30.8</td>
+                <td>38.9</td>
+                <td>30.3</td>
+                <td>100.50</td>
+            </tr>
+            </tbody>
+        </table>
+        <div class="L_ye"></div>
+    </div>
+    <div class="D_submit D_submit_3">
+        <input type="submit" class="red_btn" value="导出" />
+        <input type="button" class="green_btn" value="打印预览" />
+        <input type="button" class="green_btn" value="打印" />
+    </div>
+</div>
+<script type="text/javascript" src="../ui/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="../ui/highcharts/highstock.js"></script>
+<script type="text/javascript" src="../ui/highcharts/exporting.js"></script>
+<script type="text/javascript" src="../ui/My97DatePicker/WdatePicker.js"></script>
+<script type="text/javascript">
+    var date1 = [
+        [Date.UTC(2011, 11), 10.0 ],
+        [Date.UTC(2012, 0), 20.0 ],
+        [Date.UTC(2012, 1), 30.0 ],
+        [Date.UTC(2012, 2), 40.0 ],
+        [Date.UTC(2012, 3), 50.0 ],
+        [Date.UTC(2012, 4), 60.0 ],
+        [Date.UTC(2012, 5), 70.0 ],
+        [Date.UTC(2012, 6), 80.0 ],
+        [Date.UTC(2012, 7), 70.0 ],
+        [Date.UTC(2012, 8), 60.0 ],
+        [Date.UTC(2012, 9), 50.0 ],
+        [Date.UTC(2012, 10), 40.0 ],
+        [Date.UTC(2012, 11), 30.0 ],
+        [Date.UTC(2013, 0), 20.0 ],
+        [Date.UTC(2013, 1), 10.0 ],
+        [Date.UTC(2013, 2), 20.0 ],
+        [Date.UTC(2013, 3), 30.0 ],
+        [Date.UTC(2013, 4), 40.0 ],
+        [Date.UTC(2013, 5), 50.0 ],
+        [Date.UTC(2013, 6), 30.27],
+        [Date.UTC(2013, 7), 31.04],
+        [Date.UTC(2013, 8), 20.0 ],
+        [Date.UTC(2013, 9), 30.54],
+        [Date.UTC(2013, 10), 27.94],
+        [Date.UTC(2013, 11), 10.0 ]
+    ];
+    var date2 = [
+        [Date.UTC(2011, 11), 20.0 ],
+        [Date.UTC(2012, 0), 30.0 ],
+        [Date.UTC(2012, 1), 20.0 ],
+        [Date.UTC(2012, 2), 40.0 ],
+        [Date.UTC(2012, 3), 10.0 ],
+        [Date.UTC(2012, 4), 50.0 ],
+        [Date.UTC(2012, 5), 20.0 ],
+        [Date.UTC(2012, 6), 30.0 ],
+        [Date.UTC(2012, 7), 50.0 ],
+        [Date.UTC(2012, 8), 60.0 ],
+        [Date.UTC(2012, 9), 10.0 ],
+        [Date.UTC(2012, 10), 20.0 ],
+        [Date.UTC(2012, 11), 30.0 ],
+        [Date.UTC(2013, 0), 20.0 ],
+        [Date.UTC(2013, 1), 80.0 ],
+        [Date.UTC(2013, 2), 20.0 ],
+        [Date.UTC(2013, 3), 30.0 ],
+        [Date.UTC(2013, 4), 10.0 ],
+        [Date.UTC(2013, 5), 20.0 ],
+        [Date.UTC(2013, 6), 37.23],
+        [Date.UTC(2013, 7), 37.83],
+        [Date.UTC(2013, 8), 50.0 ],
+        [Date.UTC(2013, 9), 37.93],
+        [Date.UTC(2013, 10), 42.65],
+        [Date.UTC(2013, 11), 10.0 ]
+    ];
+    var date3 = [
+        [Date.UTC(2011, 11), 50.0 ],
+        [Date.UTC(2012, 0), 40.0 ],
+        [Date.UTC(2012, 1), 30.0 ],
+        [Date.UTC(2012, 2), 20.0 ],
+        [Date.UTC(2012, 3), 10.0 ],
+        [Date.UTC(2012, 4), 20.0 ],
+        [Date.UTC(2012, 5), 30.0 ],
+        [Date.UTC(2012, 6), 40.0 ],
+        [Date.UTC(2012, 7), 50.0 ],
+        [Date.UTC(2012, 8), 60.0 ],
+        [Date.UTC(2012, 9), 70.0 ],
+        [Date.UTC(2012, 10), 80.0 ],
+        [Date.UTC(2012, 11), 70.0 ],
+        [Date.UTC(2013, 0), 40.0 ],
+        [Date.UTC(2013, 1), 30.0 ],
+        [Date.UTC(2013, 2), 20.0 ],
+        [Date.UTC(2013, 3), 10.0 ],
+        [Date.UTC(2013, 4), 50.0 ],
+        [Date.UTC(2013, 5), 60.0 ],
+        [Date.UTC(2013, 6), 32.5],
+        [Date.UTC(2013, 7), 31.13],
+        [Date.UTC(2013, 8), 20.0 ],
+        [Date.UTC(2013, 9), 31.53],
+        [Date.UTC(2013, 10), 29.41],
+        [Date.UTC(2013, 11), 60.0 ]
+    ];
+    var date4 = [
+        [Date.UTC(2011, 11), 80.0],
+        [Date.UTC(2012, 0), 70.0],
+        [Date.UTC(2012, 1), 50.0],
+        [Date.UTC(2012, 2), 60.0],
+        [Date.UTC(2012, 3), 40.0],
+        [Date.UTC(2012, 4), 30.0],
+        [Date.UTC(2012, 5), 20.0],
+        [Date.UTC(2012, 6), 10.0],
+        [Date.UTC(2012, 7), 20.0],
+        [Date.UTC(2012, 8), 30.0],
+        [Date.UTC(2012, 9), 40.0],
+        [Date.UTC(2012, 10), 50.0],
+        [Date.UTC(2012, 11), 60.0],
+        [Date.UTC(2013, 0), 70.0],
+        [Date.UTC(2013, 1), 60.0],
+        [Date.UTC(2013, 2), 50.0],
+        [Date.UTC(2013, 3), 40.0],
+        [Date.UTC(2013, 4), 30.0],
+        [Date.UTC(2013, 5), 20.0],
+        [Date.UTC(2013, 6), 43.77],
+        [Date.UTC(2013, 7), 32.91],
+        [Date.UTC(2013, 8), 54.0],
+        [Date.UTC(2013, 9), 46.01],
+        [Date.UTC(2013, 10), 32.53],
+        [Date.UTC(2013, 11), 53.0]
+    ];
+
+    (function ($) {
+        Highcharts.setOptions({
+            lang: {
+                months: ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月'],
+                shortMonths: ['一', '二', '三', '四', '五', '六', '七', '八', '九', '十', '十一', '十二'],
+                weekdays: ['星期天', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六']
+            }
+        });
+        $('#container').highcharts('StockChart', {
+            credits: {
+                enabled: false
+            },
+            rangeSelector: {
+                selected: 0,
+                inputEnabled: false,
+                buttons: [
+                    {
+                        type: 'month',
+                        count: 6,
+                        text: '6月'
+                    },
+                    {
+                        type: 'year',
+                        count: 1,
+                        text: '1年'
+                    },
+                    {
+                        type: 'all',
+                        text: '全部'
+                    }
+                ]
+            },
+            xAxis: {
+                type: 'datetime',
+                //X轴最小以月为单位
+                minTickInterval: 30 * 24 * 3600 * 1000,
+                dateTimeLabelFormats: {
+                    month: '%Y-%m',
+                    year: '%Y'
+                }
+            },
+            yAxis: {
+                plotLines: [
+                    {
+                        value: 0,
+                        width: 2,
+                        color: 'silver'
+                    }
+                ]
+            },
+            tooltip: {
+                headerFormat: '<span style="font-size: 12px">{point.key}</span><br/>',
+                pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y}</b><br/>',
+                valueDecimals: 2,
+                xDateFormat: '%Y,%b'
+            },
+            series: [
+                {
+                    name: '同比增长的企业占比',
+                    data: date1
+                },
+                {
+                    name: '同比持平的企业占比',
+                    data: date2
+                },
+                {
+                    name: '同比下降的企业占比',
+                    data: date3
+                },
+                {
+                    name: '出口订单景气指数',
+                    data: date4
+                }
+            ]
+        });
+    })(jQuery);
+</script>
+</body>
+</html>

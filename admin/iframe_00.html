@@ -1,0 +1,152 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>浙江省外经贸运行调查监测系统</title>
+    <link rel="stylesheet" href="../style/reset.css" />
+    <link rel="stylesheet" href="../style/base.css" />
+    <link rel="stylesheet" href="../style/header.css" />
+    <link rel="stylesheet" href="../style/detail.css" />
+    <link rel="stylesheet" href="../style/list.css" />
+    <link rel="stylesheet" href="../style/search.css" />
+    <link rel="stylesheet" href="../ui/zTree/css/zTreeStyle/zTreeStyle.css" />
+    <style type="text/css">
+        form {
+            overflow: hidden;
+        }
+
+        .iframe_div {
+            width: 730px;
+            margin-top: 7px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+<form action="#">
+    <div class="D_title"><span>自由查询</span></div>
+    <div class="search">
+        <ul>
+            <li><label>起始时间：</label><input type="text" class="D_text_f" /></li>
+            <li><label>截至时间：</label><input type="text" class="D_text_f" /></li>
+            <li><label>问卷问题：</label>
+                <select class="D_text_f">
+                    <option>请选择</option>
+                    <option>企业订单同比</option>
+                    <option>本企业主要出口商品价格比上年同期</option>
+                    <option>今年以来本企业出口利润比上年同期</option>
+                    <option>目前企业资金状况</option>
+                    <option>出口商品原材料价格</option>
+                    <option>本企业用工紧缺程度</option>
+                    <option>生产企业平均工资</option>
+                    <option>可以承受的未来一年内人民币升值幅度</option>
+                    <option>三个月以内的短期订单比例</option>
+                    <option>本企业对未来一段时间出口前景预期</option>
+                </select>
+            </li>
+        </ul>
+        <ul>
+            <li><label>问卷答案：</label> <select class="D_text_f">
+                <option>请选择</option>
+                <option>增长</option>
+                <option>增长及持平</option>
+            </select>
+            </li>
+            <li><label>企业类型：</label> <select class="D_text_f">
+                <option>请选择</option>
+                <option>流通型</option>
+                <option>生产型</option>
+                <option>其他</option>
+            </select>
+            </li>
+            <li><label>出口商品：</label> <select class="D_text_f">
+                <option>请选择</option>
+                <option>机电</option>
+                <option>纺织服装类</option>
+                <option>轻工类</option>
+                <option>其他</option>
+            </select>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <label>贸易方式：</label><select class="D_text_f">
+                <option>请选择</option>
+                <option>一般贸易</option>
+                <option>加工贸易</option>
+                <option>其它贸易</option>
+            </select>
+            </li>
+            <li><label>企业规模：</label> <select class="D_text_f">
+                <option>请选择</option>
+                <option>500万以下</option>
+                <option>500万——1500万</option>
+                <option>1500万——5000万</option>
+                <option>500万——5000万</option>
+                <option>5000万以上</option>
+            </select>
+            </li>
+            <li></li>
+        </ul>
+    </div>
+    <div class="search_b">
+        <input type="submit" class="search_btn" value="查 询" />
+    </div>
+</form>
+<div class="iframe_div">
+    <div id="container_01_1" style="width:730px; height: 300px; margin: 0 auto"></div>
+</div>
+<script type="text/javascript" src="../ui/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="../ui/highcharts/highcharts.js"></script>
+<script type="text/javascript" src="../ui/highcharts/exporting.js"></script>
+<script type="text/javascript">
+    $(function () {
+
+        //趋势统计
+        $('#container_01_1').highcharts({
+            credits: {
+                enabled: false
+            },
+            title: {
+                text: '',
+                x: -20 //center
+            },
+            subtitle: {
+                text: '',
+                x: -20
+            },
+            xAxis: {
+                categories: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月']
+            },
+            yAxis: {
+                title: {
+                    text: ''
+                },
+                plotLines: [
+                    {
+                        value: 0,
+                        width: 1,
+                        color: '#808080'
+                    }
+                ]
+            },
+            tooltip: {
+                valueSuffix: '%'
+            },
+            legend: {
+                layout: 'vertical',
+                align: 'right',
+                verticalAlign: 'middle',
+                borderWidth: 0
+            },
+            series: [
+                {
+                    name: '趋势统计',
+                    data: [7.0, 6.9, 9.5, 10.5, 12.2, 11.5, 15.2, 13.5, 17.3, 18.3, 13.9, 9.6]
+                }
+            ]
+        });
+    });
+</script>
+</body>
+</html>

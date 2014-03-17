@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>浙江省外经贸运行调查监测系统</title>
+    <link rel="stylesheet" href="../style/reset.css" />
+    <link rel="stylesheet" href="../style/base.css" />
+    <link rel="stylesheet" href="../style/header.css" />
+    <link rel="stylesheet" href="../style/detail.css" />
+    <link rel="stylesheet" href="../style/list.css" />
+    <link rel="stylesheet" href="../style/search.css" />
+    <link rel="stylesheet" href="../ui/zTree/css/zTreeStyle/zTreeStyle.css" />
+    <link rel="stylesheet" href="../style/jbqk.css" />
+    <style type="text/css">
+        .L_content {
+            width: 730px;
+            overflow: hidden;
+            float: left;
+        }
+
+        .L_content table {
+            width: 730px;
+        }
+    </style>
+</head>
+<body>
+<div class="D_title"><span>新增企业用户管理</span></div>
+<div class="L_content">
+    <table class="D_table jbqk">
+        <tr>
+            <td class="D_td_t"><span class="red">*</span><span>企业海关码：</span></td>
+            <td><input type="text" class="D_text_b" /></td>
+        </tr>
+        <tr>
+            <td class="D_td_t"><span class="red">*</span><span>企业名称：</span></td>
+            <td><input type="text" class="D_text_b" /></td>
+        </tr>
+        <tr>
+            <td class="D_td_t"><span class="red">*</span><span>所属机构：</span></td>
+            <td>
+                <input type="text" class="D_text_b" id="citySel" onclick="showMenu();" />
+            </td>
+        </tr>
+        <tr>
+            <td class="D_td_t"><span class="red">*</span><span>级别：</span></td>
+            <td>
+                <select class="D_text_a">
+                    <option>请选择</option>
+                    <option>省级</option>
+                    <option>市县级</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td class="D_td_t"><span class="red">*</span><span>企业负责人：</span></td>
+            <td><input type="text" class="D_text_b" /></td>
+        </tr>
+        <tr>
+            <td class="D_td_t"><span class="red">*</span><span>负责人手机号码：</span></td>
+            <td><input type="text" class="D_text_b" /></td>
+        </tr>
+        <tr>
+            <td class="D_td_t"><span class="red">*</span><span>联系人：</span></td>
+            <td><input type="text" class="D_text_b" /></td>
+        </tr>
+        <tr>
+            <td class="D_td_t"><span class="red">*</span><span>联系人手机号码：</span></td>
+            <td><input type="text" class="D_text_b" /></td>
+        </tr>
+    </table>
+    <div class="search_b">
+        <input type="submit" class="search_btn" value="提 交" />
+    </div>
+</div>
+<script type="text/javascript" src="../ui/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="../ui/zTree/js/jquery.ztree.core-3.5.min.js"></script>
+<script type="text/javascript" src="../js/base.js"></script>
+<!--# include file="cho_user_tree.html" -->
+</body>
+</html>

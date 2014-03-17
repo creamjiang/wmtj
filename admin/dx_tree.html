@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>浙江省外经贸运行调查监测系统</title>
+    <link rel="stylesheet" href="../style/reset.css" />
+    <link rel="stylesheet" href="../style/list.css" />
+    <link rel="stylesheet" href="../ui/zTree/css/zTreeStyle/zTreeStyle.css" />
+    <style type="text/css">
+        .cb_tree {
+            height: 350px;
+            overflow-y: auto;
+            border-bottom: 1px solid #CCCCCC;
+            margin-bottom: 7px;
+        }
+
+        .cb_btn {
+            width: 68px;
+            margin: 0 auto
+        }
+    </style>
+</head>
+<body>
+<div class="cb_tree">
+    <ul id="treeDemo" class="ztree"></ul>
+</div>
+<div class="cb_btn">
+    <input type="button" class="search_btn" value="确 定" />
+</div>
+<script type="text/javascript" src="../ui/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="../ui/zTree/js/jquery.ztree.core-3.5.min.js"></script>
+<script type="text/javascript">
+    var setting = {
+        data: {
+            simpleData: {
+                enable: true
+            }
+        }
+    };
+
+    var zNodes = [
+        { id: 1, pId: 0, name: "浙江省", open: true},
+        { id: 21, pId: 1, name: "杭州市", open: true},
+        { id: 211, pId: 21, name: "上城"},
+        { id: 22, pId: 1, name: "宁波市", open: false},
+        { id: 221, pId: 22, name: "汇总"},
+        { id: 23, pId: 1, name: "温州市", open: false},
+        { id: 231, pId: 23, name: "汇总"},
+        { id: 24, pId: 1, name: "嘉兴市", open: false},
+        { id: 241, pId: 24, name: "汇总"},
+        { id: 25, pId: 1, name: "湖州市", open: false},
+        { id: 251, pId: 25, name: "汇总"},
+        { id: 26, pId: 1, name: "绍兴市", open: false},
+        { id: 261, pId: 26, name: "汇总"},
+        { id: 27, pId: 1, name: "金华市", open: false},
+        { id: 271, pId: 27, name: "汇总"},
+        { id: 28, pId: 1, name: "衢州市", open: false},
+        { id: 281, pId: 28, name: "汇总"},
+        { id: 29, pId: 1, name: "舟山市", open: false},
+        { id: 291, pId: 29, name: "汇总"},
+        { id: 30, pId: 1, name: "台州市", open: false},
+        { id: 301, pId: 30, name: "汇总"},
+        { id: 31, pId: 1, name: "丽水市", open: false},
+        { id: 311, pId: 31, name: "汇总"}
+    ];
+
+    $(document).ready(function () {
+        $.fn.zTree.init($("#treeDemo"), setting, zNodes);
+    });
+</script>
+</body>
+</html>

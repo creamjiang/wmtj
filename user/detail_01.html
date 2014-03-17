@@ -1,0 +1,681 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>浙江省外经贸运行调查监测系统</title>
+    <link rel="stylesheet" href="../style/reset.css" />
+    <link rel="stylesheet" href="../style/base.css" />
+    <link rel="stylesheet" href="../style/header.css" />
+    <link rel="stylesheet" href="../style/detail.css" />
+    <link rel="stylesheet" href="../ui/zTree/css/zTreeStyle/zTreeStyle.css" />
+    <link rel="stylesheet" href="../style/jbqk.css" />
+    <style type="text/css">
+        .ztree {
+            width: 240px;
+            height: 250px;
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+
+<!--# include file="header.html" -->
+
+<form action="#">
+<div class="D_content">
+<div class="D_title"><span>填写企业基本情况</span></div>
+<div class="D_table_t"><h2>浙江来飞户外用品股份有限公司基本信息</h2><span>(存稿)</span></div>
+<div class="div_table">
+    <table class="D_table jbqk">
+        <tr>
+            <td class="D_td_t"><span class="red">*</span><span>企业名称：</span></td>
+            <td><input type="text" class="D_text_a" /></td>
+            <td class="D_td_t"><span class="red">*</span><span>企业海关代码：</span></td>
+            <td><input type="text" class="D_text_a" /></td>
+            <td class="D_td_t"><span class="red">*</span><span>组织机构代码：</span></td>
+            <td><input type="text" class="D_text_a" /></td>
+        </tr>
+    </table>
+</div>
+<div class="div_table">
+    <table class="D_table jbqk">
+        <tr class="tr_bg">
+            <td colspan="6">
+                <h3>企业基本信息</h3>
+            </td>
+        </tr>
+        <tr>
+            <td class="D_td_t"><span class="red">*</span><span>法人代表：</span></td>
+            <td colspan="2"><input type="text" class="D_text_b" /></td>
+            <td class="D_td_t"><span class="red">*</span><span>注册资本(万元人民币)：</span></td>
+            <td colspan="2"><input type="text" class="D_text_b" /></td>
+        </tr>
+        <tr>
+            <td class="D_td_t"><span class="red">*</span><span>企业负责人：</span></td>
+            <td><input type="text" class="D_text_a" /></td>
+            <td class="D_td_t"><span class="red">*</span><span>企业负责人电话：</span></td>
+            <td><input type="text" class="D_text_a" /></td>
+            <td class="D_td_t"><span class="red">*</span><span>企业负责人手机：</span></td>
+            <td><input type="text" class="D_text_a" /></td>
+        </tr>
+        <tr>
+            <td class="D_td_t"><span class="red">*</span><span>外贸经理：</span></td>
+            <td><input type="text" class="D_text_a" /></td>
+            <td class="D_td_t"><span class="red">*</span><span>外贸经理电话：</span></td>
+            <td><input type="text" class="D_text_a" /></td>
+            <td class="D_td_t"><span class="red">*</span><span>外贸经理手机：</span></td>
+            <td><input type="text" class="D_text_a" /></td>
+        </tr>
+        <tr>
+            <td class="D_td_t"><span class="red">*</span><span>企业地址：</span></td>
+            <td colspan="2"><input type="text" class="D_text_b" /></td>
+            <td class="D_td_t"><span>企业行业代码：</span></td>
+            <td colspan="2"><input type="text" class="D_text_b" /></td>
+        </tr>
+        <tr>
+            <td class="D_td_t"><span class="red">*</span><span>企业网址：</span></td>
+            <td colspan="5"><input type="text" class="D_text_e" /></td>
+        </tr>
+    </table>
+</div>
+<div class="div_table">
+    <table class="D_table qyzyywxx">
+        <tr class="tr_bg">
+            <td colspan="6">
+                <h3>企业主要业务信息</h3>
+            </td>
+        </tr>
+        <tr>
+            <td class="D_td_t_l"><span class="red">*</span><span>企业经营类型：</span></td>
+            <td class="D_td_b"><label><input type="radio" name="i1" />A.生产型企业</label></td>
+            <td class="D_td_b"><label><input type="radio" name="i1" />B.流通型企业</label></td>
+            <td class="D_td_b"><label><input type="radio" name="i1" />C.综合型企业</label></td>
+            <td class="D_td_b"></td>
+        </tr>
+        <tr class="wtb">
+            <td class="D_td_t_l"><span class="red">*</span><span>企业性质：</span></td>
+            <td class="D_td_b"><label><input type="radio" name="i2" />A.国有企业</label></td>
+            <td class="D_td_b"><label><input type="radio" name="i2" />B.外商投资企业</label></td>
+            <td class="D_td_b"><label><input type="radio" name="i2" />C.集体企业</label></td>
+            <td class="D_td_b"><label><input type="radio" name="i2" />D.私营企业</label></td>
+        </tr>
+        <tr>
+            <td class="D_td_t_l"><span class="red">*</span><span>是否属于全省战略性新兴产业：</span></td>
+            <td class="D_td_b"><label><input type="radio" name="i3" />A.是</label></td>
+            <td class="D_td_b"><label><input type="radio" name="i3" />B.否</label></td>
+            <td class="D_td_b"></td>
+            <td class="D_td_b"></td>
+        </tr>
+        <tr>
+            <td class="D_td_t_l"><span class="red">*</span><span>企业进出口业务主要贸易方式：</span></td>
+            <td class="D_td_b"><label><input type="checkbox" name="i4" />A.一般贸易</label></td>
+            <td class="D_td_b"><label><input type="checkbox" name="i4" />B.加工贸易</label></td>
+            <td class="D_td_b"><label><input type="checkbox" name="i4" />C.其他贸易方式</label></td>
+            <td class="D_td_b"><label><input type="checkbox" name="i4" />D.市场采购方式</label></td>
+        </tr>
+        <tr>
+            <td class="D_td_t_l"><span class="red">*</span><span>企业填报数据包含海关代码有：</span></td>
+            <td colspan="2">
+                <ul class="hgdm_list">
+                    <li>
+                        <input id="hgdm" type="text" class="D_text_b" /><input id="hgdm_plus" type="button" class="search_plus d_hide" />
+                    </li>
+                </ul>
+                <ul class="hgdm_list hgdm_list_c d_hide">
+                    <li>
+                        <input id="hgdm_val" type="text" class="D_text_b" disabled="disabled" /><input id="hgdm_m" type="button" class="search_m" />
+                    </li>
+                </ul>
+            </td>
+            <td class="D_td_b"></td>
+            <td class="D_td_b"></td>
+        </tr>
+        <tr>
+            <td class="D_td_t_l">
+                <span class="red">*</span><span>经营出口商品范围：</span>
+            </td>
+            <td colspan="2"><input type="text" class="D_text_b" id="citySel" onclick="showMenu();" /></td>
+            <td class="D_td_b"></td>
+            <td class="D_td_b"></td>
+        </tr>
+        <tr>
+            <td class="D_td_t_l"><span class="red">*</span><span>本企业主要出口市场：</span></td>
+            <td colspan="2"><input type="text" class="D_text_b" id="citySel_0" onclick="showMenu_0();" /></td>
+            <td class="D_td_b"><span class="red">请选择前三的国家</span></td>
+            <td class="D_td_b"></td>
+        </tr>
+        <tr>
+            <td class="D_td_t_l"><span class="red">*</span><span>上年度出口规模(万美元)：</span></td>
+            <td class="D_td_b"><input type="text" class="D_text_a" /></td>
+            <td class="D_td_b">
+                <select class="D_text_a">
+                    <option>请选择</option>
+                    <option>100万美元以下</option>
+                    <option>100万-500万美元</option>
+                    <option>500万-5000万美元</option>
+                    <option>5000万美元以上</option>
+                </select>
+            </td>
+            <td class="D_td_b"></td>
+            <td class="D_td_b"></td>
+        </tr>
+        <tr>
+            <td class="D_td_t_l"><span class="red">*</span><span>上年度进口规模(万美元)：</span></td>
+            <td class="D_td_b"><input type="text" class="D_text_a" /></td>
+            <td class="D_td_b">
+                <select class="D_text_a">
+                    <option>请选择</option>
+                    <option>10万美元以下(含进口额为零)</option>
+                    <option>10万-500万美元</option>
+                    <option>500万-5000万美元</option>
+                    <option>5000万美元以上</option>
+                </select>
+            </td>
+            <td class="D_td_b"></td>
+            <td class="D_td_b"></td>
+        </tr>
+        <tr>
+            <td rowspan="7" class="D_td_t_l"><span class="red">*</span><span>本企业在出口业务中是否使用自有品牌：</span></td>
+            <td colspan="4" class="no_border">
+                <label class="red bold"><input data-id="zypp_btn" type="radio" name="i6_0" />A.有。品牌名称：</label>
+                <input type="text" class="D_text_b ppmc" disabled /> (填写主要出口品牌)
+            </td>
+        </tr>
+        <tr class="zypp">
+            <td colspan="4" class="no_border">
+                <label class="mar_l_20"><input type="checkbox" name="i6" disabled />曾被评为国家级出口名牌</label></td>
+        </tr>
+        <tr class="zypp">
+            <td colspan="4" class="no_border">
+                <label class="mar_l_20"><input type="checkbox" name="i6" disabled />曾被评为省级出口名牌</label>
+            </td>
+        </tr>
+        <tr class="zypp">
+            <td colspan="4" class="no_border">
+                <label class="mar_l_20"><input type="checkbox" name="i6" disabled />曾被评为市级出口名牌</label>
+            </td>
+        </tr>
+        <tr class="zypp">
+            <td colspan="4" class="no_border">
+                <label class="mar_l_20"><input type="checkbox" name="i6" disabled />曾被评为县(市、区)级出口名牌</label>
+            </td>
+        </tr>
+        <tr class="zypp">
+            <td colspan="4" class="no_border">
+                <label class="mar_l_20"><input type="checkbox" name="i6" disabled />其他</label>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4">
+                <label class="green bold"><input data-id="zyqq" type="radio" name="i6_0" />B.没有</label></td>
+        </tr>
+        <tr>
+            <td class="D_td_t_l"><span class="red">*</span><span>人工人数：</span></td>
+            <td class="D_td_b"><input type="text" class="D_text_a" /></td>
+            <td class="D_td_b">
+                <select class="D_text_a">
+                    <option>请选择</option>
+                    <option>20人以下</option>
+                    <option>20人-300人</option>
+                    <option>300人-2000人</option>
+                    <option>2000人以上</option>
+                </select>
+            </td>
+            <td class="D_td_b"></td>
+            <td class="D_td_b"></td>
+        </tr>
+        <tr>
+            <td class="D_td_t_l"><span class="red">*</span><span>上年度销售额(万元)：</span></td>
+            <td class="D_td_b"><input type="text" class="D_text_a" /></td>
+            <td class="D_td_b">
+                <select class="D_text_a">
+                    <option>请选择</option>
+                    <option>300万元以下</option>
+                    <option>300万-2000万元</option>
+                    <option>2000万-4亿元</option>
+                    <option>4亿元以上</option>
+                </select>
+            </td>
+            <td class="D_td_b"></td>
+            <td class="D_td_b"></td>
+        </tr>
+    </table>
+</div>
+<div class="div_table div_table_bottom">
+    <table class="table_8">
+        <tr>
+            <td width="60"><span class="red">*</span><span>填报人：</span></td>
+            <td><input type="text" class="D_text_a" /></td>
+            <td width="60"><span class="red">*</span><span>电话：</span></td>
+            <td><input type="text" class="D_text_a" /></td>
+            <td width="60"><span class="red">*</span><span>手机：</span></td>
+            <td><input type="text" class="D_text_a" /></td>
+            <td width="60"><span class="red">*</span><span>QQ：</span></td>
+            <td><input type="text" class="D_text_a" /></td>
+        </tr>
+    </table>
+</div>
+<div class="D_submit">
+    <input type="button" class="green_btn" value="存 稿" /> <input type="submit" class="red_btn" value="保存并提交" />
+</div>
+</div>
+</form>
+
+<!--# include file="footer.html" -->
+
+</div>
+<script type="text/javascript" src="../ui/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="../js/base.js"></script>
+<script type="text/javascript" src="../js/jbqk.js"></script>
+<script type="text/javascript" src="../ui/zTree/js/jquery.ztree.core-3.5.min.js"></script>
+<script type="text/javascript" src="../ui/zTree/js/jquery.ztree.excheck-3.5.min.js"></script>
+<script type="text/javascript">
+var setting = {
+    check: {
+        enable: true,
+        chkboxType: {"Y": "", "N": ""}
+    },
+    view: {
+        dblClickExpand: false
+    },
+    data: {
+        simpleData: {
+            enable: true
+        }
+    },
+    callback: {
+        beforeClick: beforeClick,
+        onCheck: onCheck
+    }
+};
+
+var zNodes = [
+    {id: 1, pId: -1, code: "0-1", name: "出口商品", open: true},
+    {id: 2, pId: 1, code: "0-1-2", name: "机电产品"},
+    {id: 3, pId: 1, code: "0-1-3", name: "纺织服装"},
+    {id: 4, pId: 1, code: "0-1-4", name: "轻工产品"},
+    {id: 5, pId: 1, code: "0-1-5", name: "农产品"},
+    {id: 6, pId: 1, code: "0-1-6", name: "矿产品"},
+    {id: 7, pId: 1, code: "0-1-7", name: "医化产品"},
+    {id: 8, pId: 1, code: "0-1-8", name: "其他"},
+    {id: 9, pId: 2, code: "0-1-2-9", name: "金属及其制品"},
+    {id: 10, pId: 2, code: "0-1-2-10", name: "机械设备"},
+    {id: 11, pId: 2, code: "0-1-2-11", name: "家用电器及零部件"},
+    {id: 12, pId: 2, code: "0-1-2-12", name: "电子产品"},
+    {id: 13, pId: 2, code: "0-1-2-13", name: "船舶"},
+    {id: 16, pId: 2, code: "0-1-2-16", name: "仪器仪表"},
+    {id: 17, pId: 2, code: "0-1-2-17", name: "其他机电产品"},
+    {id: 18, pId: 3, code: "0-1-3-18", name: "纺织原料"},
+    {id: 19, pId: 3, code: "0-1-3-19", name: "纺织纱线、面料"},
+    {id: 20, pId: 3, code: "0-1-3-20", name: "家纺产品"},
+    {id: 21, pId: 3, code: "0-1-3-21", name: "服装类"},
+    {id: 22, pId: 3, code: "0-1-3-22", name: "服饰类"},
+    {id: 23, pId: 3, code: "0-1-3-23", name: "其他纺织服装"},
+    {id: 24, pId: 4, code: "0-1-4-24", name: "家具及其零件类"},
+    {id: 25, pId: 4, code: "0-1-4-25", name: "床垫、寝具及类似品"},
+    {id: 26, pId: 4, code: "0-1-4-26", name: "灯具、照片装置及类似品"},
+    {id: 27, pId: 4, code: "0-1-4-27", name: "旅行用品及箱包"},
+    {id: 28, pId: 4, code: "0-1-4-28", name: "鞋类"},
+    {id: 29, pId: 4, code: "0-1-4-29", name: "塑料制品"},
+    {id: 30, pId: 4, code: "0-1-4-30", name: "玩具类"},
+    {id: 31, pId: 4, code: "0-1-4-31", name: "体育用品及设备"}
+];
+
+function beforeClick(treeId, treeNode) {
+    var zTree = $.fn.zTree.getZTreeObj("treeDemo");
+    zTree.checkNode(treeNode, !treeNode.checked, null, true);
+    return false;
+}
+
+function onCheck(e, treeId, treeNode) {
+    var zTree = $.fn.zTree.getZTreeObj("treeDemo"),
+            nodes = zTree.getCheckedNodes(true),
+            v = "";
+    for (var i = 0, l = nodes.length; i < l; i++) {
+        v += nodes[i].name + ",";
+    }
+    if (v.length > 0) v = v.substring(0, v.length - 1);
+    var cityObj = $("#citySel");
+    cityObj.attr("value", v);
+}
+
+function showMenu() {
+    var cityObj = $("#citySel");
+    var cityOffset = $("#citySel").offset();
+    $("#menuContent").css({left: cityOffset.left + "px", top: cityOffset.top + cityObj.outerHeight() + "px"}).slideDown("fast");
+
+    $("body").bind("mousedown", onBodyDown);
+}
+
+function hideMenu() {
+    $("#menuContent").fadeOut("fast");
+    $("body").unbind("mousedown", onBodyDown);
+}
+
+function onBodyDown(event) {
+    if (!(event.target.id == "citySel" || event.target.id == "menuContent" || $(event.target).parents("#menuContent").length > 0)) {
+        hideMenu();
+    }
+}
+
+var setting_0 = {
+    check: {
+        enable: true,
+        chkboxType: {"Y": "", "N": ""}
+    },
+    view: {
+        dblClickExpand: false
+    },
+    data: {
+        simpleData: {
+            enable: true
+        }
+    },
+    callback: {
+        beforeClick: beforeClick_0,
+        onCheck: onCheck
+    }
+};
+
+var zNodes_0 = [
+    {id: 100, pId: 0, code: "0-100", name: "亚洲"},
+    {id: 101, pId: 100, code: "0-100-101", name: "阿富汗"},
+    {id: 102, pId: 100, code: "0-100-102", name: "巴林"},
+    {id: 103, pId: 100, code: "0-100-103", name: "孟加拉国"},
+    {id: 104, pId: 100, code: "0-100-104", name: "不丹"},
+    {id: 105, pId: 100, code: "0-100-105", name: "文莱"},
+    {id: 106, pId: 100, code: "0-100-106", name: "缅甸"},
+    {id: 107, pId: 100, code: "0-100-107", name: "柬埔寨"},
+    {id: 108, pId: 100, code: "0-100-108", name: "塞浦路斯"},
+    {id: 109, pId: 100, code: "0-100-109", name: "朝鲜"},
+    {id: 110, pId: 100, code: "0-100-110", name: "中国香港"},
+    {id: 111, pId: 100, code: "0-100-111", name: "印度"},
+    {id: 112, pId: 100, code: "0-100-112", name: "印度尼西亚"},
+    {id: 113, pId: 100, code: "0-100-113", name: "伊朗"},
+    {id: 114, pId: 100, code: "0-100-114", name: "伊拉克"},
+    {id: 115, pId: 100, code: "0-100-115", name: "以色列"},
+    {id: 116, pId: 100, code: "0-100-116", name: "日本"},
+    {id: 117, pId: 100, code: "0-100-117", name: "约旦"},
+    {id: 118, pId: 100, code: "0-100-118", name: "科威特"},
+    {id: 119, pId: 100, code: "0-100-119", name: "老挝"},
+    {id: 120, pId: 100, code: "0-100-120", name: "黎巴嫩"},
+    {id: 121, pId: 100, code: "0-100-121", name: "中国澳门"},
+    {id: 122, pId: 100, code: "0-100-122", name: "马来西亚"},
+    {id: 123, pId: 100, code: "0-100-123", name: "马尔代夫"},
+    {id: 124, pId: 100, code: "0-100-124", name: "蒙古"},
+    {id: 125, pId: 100, code: "0-100-125", name: "尼泊尔"},
+    {id: 126, pId: 100, code: "0-100-126", name: "阿曼"},
+    {id: 127, pId: 100, code: "0-100-127", name: "巴基斯坦"},
+    {id: 128, pId: 100, code: "0-100-128", name: "巴勒斯坦"},
+    {id: 129, pId: 100, code: "0-100-129", name: "菲律宾"},
+    {id: 130, pId: 100, code: "0-100-130", name: "卡塔尔"},
+    {id: 131, pId: 100, code: "0-100-131", name: "沙特阿拉伯"},
+    {id: 132, pId: 100, code: "0-100-132", name: "新加坡"},
+    {id: 133, pId: 100, code: "0-100-133", name: "韩国"},
+    {id: 134, pId: 100, code: "0-100-134", name: "斯里兰卡"},
+    {id: 135, pId: 100, code: "0-100-135", name: "叙利亚"},
+    {id: 136, pId: 100, code: "0-100-136", name: "泰国"},
+    {id: 137, pId: 300, code: "0-300-137", name: "土耳其"},
+    {id: 138, pId: 100, code: "0-100-138", name: "阿联酋"},
+    {id: 139, pId: 100, code: "0-100-139", name: "也门共和国"},
+    {id: 141, pId: 100, code: "0-100-141", name: "越南"},
+    {id: 142, pId: 100, code: "0-100-142", name: "中国"},
+    {id: 143, pId: 100, code: "0-100-143", name: "中国台湾"},
+    {id: 144, pId: 100, code: "0-100-144", name: "东帝汶"},
+    {id: 145, pId: 100, code: "0-100-145", name: "哈萨克斯坦"},
+    {id: 146, pId: 100, code: "0-100-146", name: "吉尔吉斯斯坦"},
+    {id: 147, pId: 100, code: "0-100-147", name: "塔吉克斯坦"},
+    {id: 148, pId: 100, code: "0-100-148", name: "土库曼斯坦"},
+    {id: 149, pId: 100, code: "0-100-149", name: "乌兹别克斯坦"},
+    {id: 199, pId: 100, code: "0-100-199", name: "亚洲其他国家(地区)"},
+    {id: 200, pId: 0, code: "0-200", name: "非洲"},
+    {id: 201, pId: 200, code: "0-200-201", name: "阿尔及利亚"},
+    {id: 202, pId: 200, code: "0-200-202", name: "安哥拉"},
+    {id: 203, pId: 200, code: "0-200-203", name: "贝宁"},
+    {id: 204, pId: 200, code: "0-200-204", name: "博茨瓦那"},
+    {id: 205, pId: 200, code: "0-200-205", name: "布隆迪"},
+    {id: 206, pId: 200, code: "0-200-206", name: "喀麦隆"},
+    {id: 207, pId: 200, code: "0-200-207", name: "加那利群岛"},
+    {id: 208, pId: 200, code: "0-200-208", name: "佛得角"},
+    {id: 209, pId: 200, code: "0-200-209", name: "中非共和国"},
+    {id: 210, pId: 200, code: "0-200-210", name: "塞卜泰"},
+    {id: 211, pId: 200, code: "0-200-211", name: "乍得"},
+    {id: 212, pId: 200, code: "0-200-212", name: "科摩罗"},
+    {id: 213, pId: 200, code: "0-200-213", name: "刚果"},
+    {id: 214, pId: 200, code: "0-200-214", name: "吉布提"},
+    {id: 215, pId: 200, code: "0-200-215", name: "埃及"},
+    {id: 216, pId: 200, code: "0-200-216", name: "赤道几内亚"},
+    {id: 217, pId: 200, code: "0-200-217", name: "埃塞俄比亚"},
+    {id: 218, pId: 200, code: "0-200-218", name: "加蓬"},
+    {id: 219, pId: 200, code: "0-200-219", name: "冈比亚"},
+    {id: 220, pId: 200, code: "0-200-220", name: "加纳"},
+    {id: 221, pId: 200, code: "0-200-221", name: "几内亚"},
+    {id: 222, pId: 200, code: "0-200-222", name: "几内亚(比绍)"},
+    {id: 223, pId: 200, code: "0-200-223", name: "科特迪瓦"},
+    {id: 224, pId: 200, code: "0-200-224", name: "肯尼亚"},
+    {id: 225, pId: 200, code: "0-200-225", name: "利比里亚"},
+    {id: 226, pId: 200, code: "0-200-226", name: "利比亚"},
+    {id: 227, pId: 200, code: "0-200-227", name: "马达加斯加"},
+    {id: 228, pId: 200, code: "0-200-228", name: "马拉维"},
+    {id: 229, pId: 200, code: "0-200-229", name: "马里"},
+    {id: 230, pId: 200, code: "0-200-230", name: "毛里塔尼亚"},
+    {id: 231, pId: 200, code: "0-200-231", name: "毛里求斯"},
+    {id: 232, pId: 200, code: "0-200-232", name: "摩洛哥"},
+    {id: 233, pId: 200, code: "0-200-233", name: "莫桑比克"},
+    {id: 234, pId: 200, code: "0-200-234", name: "纳米比亚"},
+    {id: 235, pId: 200, code: "0-200-235", name: "尼日尔"},
+    {id: 236, pId: 200, code: "0-200-236", name: "尼日利亚"},
+    {id: 237, pId: 200, code: "0-200-237", name: "留尼汪"},
+    {id: 238, pId: 200, code: "0-200-238", name: "卢旺达"},
+    {id: 239, pId: 200, code: "0-200-239", name: "圣多美和普林西比"},
+    {id: 240, pId: 200, code: "0-200-240", name: "塞内加尔"},
+    {id: 241, pId: 200, code: "0-200-241", name: "塞舌尔"},
+    {id: 242, pId: 200, code: "0-200-242", name: "塞拉利昂"},
+    {id: 243, pId: 200, code: "0-200-243", name: "索马里"},
+    {id: 244, pId: 200, code: "0-200-244", name: "南非"},
+    {id: 245, pId: 200, code: "0-200-245", name: "西撒哈拉"},
+    {id: 246, pId: 200, code: "0-200-246", name: "苏丹"},
+    {id: 247, pId: 200, code: "0-200-247", name: "坦桑尼亚"},
+    {id: 248, pId: 200, code: "0-200-248", name: "多哥"},
+    {id: 249, pId: 200, code: "0-200-249", name: "突尼斯"},
+    {id: 250, pId: 200, code: "0-200-250", name: "乌干达"},
+    {id: 251, pId: 200, code: "0-200-251", name: "布基纳法索"},
+    {id: 252, pId: 200, code: "0-200-252", name: "民主刚果"},
+    {id: 253, pId: 200, code: "0-200-253", name: "赞比亚"},
+    {id: 254, pId: 200, code: "0-200-254", name: "津巴布韦"},
+    {id: 255, pId: 200, code: "0-200-255", name: "莱索托"},
+    {id: 256, pId: 200, code: "0-200-256", name: "梅利利亚"},
+    {id: 257, pId: 200, code: "0-200-257", name: "斯威士兰"},
+    {id: 258, pId: 200, code: "0-200-258", name: "厄立特里亚"},
+    {id: 259, pId: 200, code: "0-200-259", name: "马约特岛"},
+    {id: 299, pId: 200, code: "0-200-299", name: "非洲其他国家(地区)"},
+    {id: 300, pId: 0, code: "0-300", name: "欧洲"},
+    {id: 301, pId: 300, code: "0-300-301", name: "比利时"},
+    {id: 302, pId: 300, code: "0-300-302", name: "丹麦"},
+    {id: 303, pId: 300, code: "0-300-303", name: "英国"},
+    {id: 304, pId: 300, code: "0-300-304", name: "德国"},
+    {id: 305, pId: 300, code: "0-300-305", name: "法国"},
+    {id: 306, pId: 300, code: "0-300-306", name: "爱尔兰"},
+    {id: 307, pId: 300, code: "0-300-307", name: "意大利"},
+    {id: 308, pId: 300, code: "0-300-308", name: "卢森堡"},
+    {id: 309, pId: 300, code: "0-300-309", name: "荷兰"},
+    {id: 310, pId: 300, code: "0-300-310", name: "希腊"},
+    {id: 311, pId: 300, code: "0-300-311", name: "葡萄牙"},
+    {id: 312, pId: 300, code: "0-300-312", name: "西班牙"},
+    {id: 313, pId: 300, code: "0-300-313", name: "阿尔巴尼亚"},
+    {id: 314, pId: 300, code: "0-300-314", name: "安道尔"},
+    {id: 315, pId: 300, code: "0-300-315", name: "奥地利"},
+    {id: 316, pId: 300, code: "0-300-316", name: "保加利亚"},
+    {id: 318, pId: 300, code: "0-300-318", name: "芬兰"},
+    {id: 320, pId: 300, code: "0-300-320", name: "直布罗陀"},
+    {id: 321, pId: 300, code: "0-300-321", name: "匈牙利"},
+    {id: 322, pId: 300, code: "0-300-322", name: "冰岛"},
+    {id: 323, pId: 300, code: "0-300-323", name: "列支敦士登"},
+    {id: 324, pId: 300, code: "0-300-324", name: "马耳他"},
+    {id: 325, pId: 300, code: "0-300-325", name: "摩纳哥"},
+    {id: 326, pId: 300, code: "0-300-326", name: "挪威"},
+    {id: 327, pId: 300, code: "0-300-327", name: "波兰"},
+    {id: 328, pId: 300, code: "0-300-328", name: "罗马尼亚"},
+    {id: 329, pId: 300, code: "0-300-329", name: "圣马力诺"},
+    {id: 330, pId: 300, code: "0-300-330", name: "瑞典"},
+    {id: 331, pId: 300, code: "0-300-331", name: "瑞士"},
+    {id: 334, pId: 300, code: "0-300-334", name: "爱沙尼亚"},
+    {id: 335, pId: 300, code: "0-300-335", name: "拉脱维亚"},
+    {id: 336, pId: 300, code: "0-300-336", name: "立陶宛"},
+    {id: 337, pId: 300, code: "0-300-337", name: "格鲁吉亚"},
+    {id: 338, pId: 300, code: "0-300-338", name: "亚美尼亚"},
+    {id: 339, pId: 300, code: "0-300-339", name: "阿塞拜疆"},
+    {id: 340, pId: 300, code: "0-300-340", name: "白俄罗斯"},
+    {id: 341, pId: 300, code: "0-300-341", name: "哈萨克斯坦"},
+    {id: 342, pId: 300, code: "0-300-342", name: "吉尔吉斯斯坦"},
+    {id: 343, pId: 300, code: "0-300-343", name: "摩尔多瓦"},
+    {id: 344, pId: 300, code: "0-300-344", name: "俄罗斯联邦"},
+    {id: 345, pId: 300, code: "0-300-345", name: "塔吉克斯坦"},
+    {id: 346, pId: 300, code: "0-300-346", name: "土库曼斯坦"},
+    {id: 347, pId: 300, code: "0-300-347", name: "乌克兰"},
+    {id: 348, pId: 300, code: "0-300-348", name: "乌兹别克斯坦"},
+    {id: 349, pId: 300, code: "0-300-349", name: "南斯拉夫"},
+    {id: 350, pId: 300, code: "0-300-350", name: "斯洛文尼亚"},
+    {id: 351, pId: 300, code: "0-300-351", name: "克罗地亚"},
+    {id: 352, pId: 300, code: "0-300-352", name: "捷克共和国"},
+    {id: 353, pId: 300, code: "0-300-353", name: "斯洛伐克"},
+    {id: 354, pId: 300, code: "0-300-354", name: "马其顿"},
+    {id: 355, pId: 300, code: "0-300-355", name: "波斯尼亚-黑塞哥维那共和"},
+    {id: 356, pId: 300, code: "0-300-356", name: "梵蒂冈城国"},
+    {id: 399, pId: 300, code: "0-300-399", name: "欧洲其他国家(地区)"},
+    {id: 400, pId: 0, code: "0-400", name: "南美洲"},
+    {id: 401, pId: 400, code: "0-400-401", name: "安提瓜和巴布达"},
+    {id: 402, pId: 400, code: "0-400-402", name: "阿根廷"},
+    {id: 403, pId: 400, code: "0-400-403", name: "阿鲁巴岛"},
+    {id: 404, pId: 400, code: "0-400-404", name: "巴哈马"},
+    {id: 405, pId: 400, code: "0-400-405", name: "巴巴多斯"},
+    {id: 406, pId: 400, code: "0-400-406", name: "伯利兹"},
+    {id: 408, pId: 400, code: "0-400-408", name: "玻利维亚"},
+    {id: 409, pId: 400, code: "0-400-409", name: "博内尔"},
+    {id: 410, pId: 400, code: "0-400-410", name: "巴西"},
+    {id: 411, pId: 400, code: "0-400-411", name: "开曼群岛"},
+    {id: 412, pId: 400, code: "0-400-412", name: "智利"},
+    {id: 413, pId: 400, code: "0-400-413", name: "哥伦比亚"},
+    {id: 414, pId: 400, code: "0-400-414", name: "多米尼亚共和国"},
+    {id: 415, pId: 400, code: "0-400-415", name: "哥斯达黎加"},
+    {id: 416, pId: 400, code: "0-400-416", name: "古巴"},
+    {id: 417, pId: 400, code: "0-400-417", name: "库腊索岛"},
+    {id: 418, pId: 400, code: "0-400-418", name: "多米尼加共和国"},
+    {id: 419, pId: 400, code: "0-400-419", name: "厄瓜多尔"},
+    {id: 420, pId: 400, code: "0-400-420", name: "法属圭亚那"},
+    {id: 421, pId: 400, code: "0-400-421", name: "格林纳达"},
+    {id: 422, pId: 400, code: "0-400-422", name: "瓜德罗普"},
+    {id: 423, pId: 400, code: "0-400-423", name: "危地马拉"},
+    {id: 424, pId: 400, code: "0-400-424", name: "圭亚那"},
+    {id: 425, pId: 400, code: "0-400-425", name: "海地"},
+    {id: 426, pId: 400, code: "0-400-426", name: "洪都拉斯"},
+    {id: 427, pId: 400, code: "0-400-427", name: "牙买加"},
+    {id: 428, pId: 400, code: "0-400-428", name: "马提尼克"},
+    {id: 429, pId: 400, code: "0-400-429", name: "墨西哥"},
+    {id: 430, pId: 400, code: "0-400-430", name: "蒙特塞拉特"},
+    {id: 431, pId: 400, code: "0-400-431", name: "尼加拉瓜"},
+    {id: 432, pId: 400, code: "0-400-432", name: "巴拿马"},
+    {id: 433, pId: 400, code: "0-400-433", name: "巴拉圭"},
+    {id: 434, pId: 400, code: "0-400-434", name: "秘鲁"},
+    {id: 435, pId: 400, code: "0-400-435", name: "波多黎各"},
+    {id: 436, pId: 400, code: "0-400-436", name: "萨巴"},
+    {id: 437, pId: 400, code: "0-400-437", name: "圣卢西亚"},
+    {id: 438, pId: 400, code: "0-400-438", name: "圣马丁岛"},
+    {id: 439, pId: 400, code: "0-400-439", name: "圣文森特和格林纳丁斯"},
+    {id: 440, pId: 400, code: "0-400-440", name: "萨尔瓦多"},
+    {id: 441, pId: 400, code: "0-400-441", name: "苏里南"},
+    {id: 442, pId: 400, code: "0-400-442", name: "特立尼达和多巴哥"},
+    {id: 443, pId: 400, code: "0-400-443", name: "特克斯和凯科斯群岛"},
+    {id: 444, pId: 400, code: "0-400-444", name: "乌拉圭"},
+    {id: 445, pId: 400, code: "0-400-445", name: "委内瑞拉"},
+    {id: 446, pId: 400, code: "0-400-446", name: "英属维尔京群岛"},
+    {id: 447, pId: 400, code: "0-400-447", name: "圣其茨-尼维斯"},
+    {id: 448, pId: 400, code: "0-400-448", name: "圣皮埃尔和密克隆"},
+    {id: 449, pId: 400, code: "0-400-449", name: "荷属安地列斯群岛"},
+    {id: 499, pId: 400, code: "0-400-499", name: "拉丁美洲其他国家(地区)"},
+    {id: 500, pId: 0, code: "0-500", name: "北美洲"},
+    {id: 501, pId: 500, code: "0-500-501", name: "加拿大"},
+    {id: 502, pId: 500, code: "0-500-502", name: "美国"},
+    {id: 503, pId: 500, code: "0-500-503", name: "格陵兰"},
+    {id: 504, pId: 500, code: "0-500-504", name: "百慕大"},
+    {id: 599, pId: 500, code: "0-500-599", name: "北美洲其他国家(地区)"},
+    {id: 600, pId: 0, code: "0-600", name: "大洋洲"},
+    {id: 601, pId: 600, code: "0-600-601", name: "澳大利亚"},
+    {id: 602, pId: 600, code: "0-600-602", name: "库克群岛"},
+    {id: 603, pId: 600, code: "0-600-603", name: "斐济"},
+    {id: 604, pId: 600, code: "0-600-604", name: "盖比群岛"},
+    {id: 605, pId: 600, code: "0-600-605", name: "马克萨斯群岛"},
+    {id: 606, pId: 600, code: "0-600-606", name: "瑙鲁"},
+    {id: 607, pId: 600, code: "0-600-607", name: "新喀里多尼亚"},
+    {id: 608, pId: 600, code: "0-600-608", name: "瓦努阿图"},
+    {id: 609, pId: 600, code: "0-600-609", name: "新西兰"},
+    {id: 610, pId: 600, code: "0-600-610", name: "诺福克岛"},
+    {id: 611, pId: 600, code: "0-600-611", name: "巴布亚新几内亚"},
+    {id: 612, pId: 600, code: "0-600-612", name: "社会群岛"},
+    {id: 613, pId: 600, code: "0-600-613", name: "所罗门群岛"},
+    {id: 614, pId: 600, code: "0-600-614", name: "汤加"},
+    {id: 615, pId: 600, code: "0-600-615", name: "土阿莫土群岛"},
+    {id: 616, pId: 600, code: "0-600-616", name: "土布艾群岛"},
+    {id: 617, pId: 600, code: "0-600-617", name: "萨摩亚"},
+    {id: 618, pId: 600, code: "0-600-618", name: "基里巴斯"},
+    {id: 619, pId: 600, code: "0-600-619", name: "图瓦卢"},
+    {id: 620, pId: 600, code: "0-600-620", name: "密克罗尼西亚联邦"},
+    {id: 621, pId: 600, code: "0-600-621", name: "马绍尔群岛"},
+    {id: 622, pId: 600, code: "0-600-622", name: "帕劳共和国"},
+    {id: 623, pId: 600, code: "0-600-623", name: "法属波利尼西亚"},
+    {id: 624, pId: 600, code: "0-600-624", name: "新喀里多尼亚"},
+    {id: 625, pId: 600, code: "0-600-625", name: "瓦利斯和浮图纳"},
+    {id: 699, pId: 600, code: "0-600-699", name: "大洋洲其他国家(地区)"}
+];
+
+function beforeClick_0(treeId, treeNode) {
+    var zTree = $.fn.zTree.getZTreeObj("treeDemo_0");
+    zTree.checkNode(treeNode, !treeNode.checked, null, true);
+    return false;
+}
+
+function onCheck_0(e, treeId, treeNode) {
+    var zTree = $.fn.zTree.getZTreeObj("treeDemo_0"),
+            nodes = zTree.getCheckedNodes(true),
+            v = "";
+    for (var i = 0, l = nodes.length; i < l; i++) {
+        v += nodes[i].name + ",";
+    }
+    if (v.length > 0) v = v.substring(0, v.length - 1);
+    var cityObj = $("#citySel_0");
+    cityObj.attr("value", v);
+}
+
+function showMenu_0() {
+    var cityObj = $("#citySel_0");
+    var cityOffset = $("#citySel_0").offset();
+    $("#menuContent_0").css({left: cityOffset.left + "px", top: cityOffset.top + cityObj.outerHeight() + "px"}).slideDown("fast");
+
+    $("body").bind("mousedown", onBodyDown_0);
+}
+
+function hideMenu_0() {
+    $("#menuContent_0").fadeOut("fast");
+    $("body").unbind("mousedown", onBodyDown_0);
+}
+
+function onBodyDown_0(event) {
+    if (!(event.target.id == "citySel_0" || event.target.id == "menuContent_0" || $(event.target).parents("#menuContent_0").length > 0)) {
+        hideMenu_0();
+    }
+}
+
+$(document).ready(function () {
+    $.fn.zTree.init($("#treeDemo"), setting, zNodes);
+    $.fn.zTree.init($("#treeDemo_0"), setting_0, zNodes_0);
+});
+</script>
+<div id="menuContent" class="menuContent" style="display:none; position: absolute;">
+    <ul id="treeDemo" class="ztree" style="margin-top:0;"></ul>
+</div>
+<div id="menuContent_0" class="menuContent" style="display:none; position: absolute;">
+    <ul id="treeDemo_0" class="ztree" style="margin-top:0;"></ul>
+</div>
+</body>
+</html>

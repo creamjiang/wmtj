@@ -1,0 +1,34 @@
+<script type="text/javascript">
+    var setting = {
+        data: {
+            simpleData: {
+                enable: true
+            }
+        }
+    };
+
+    var zNodes = [
+        { id: 1, pId: 0, name: "杭州市", open: true},
+        { id: 11, pId: 1, name: "上城区", target: "_self", url: "#"},
+        { id: 111, pId: 11, name: "张飞", target: "_self", url: "#"},
+        { id: 12, pId: 1, name: "下城区", target: "_self", url: "#"},
+        { id: 121, pId: 12, name: "关羽", target: "_self", url: "#"},
+        { id: 13, pId: 1, name: "江干区", target: "_self", url: "#"},
+        { id: 14, pId: 1, name: "拱墅区", target: "_self", url: "#"},
+        { id: 15, pId: 1, name: "西湖区", target: "_self", url: "#"},
+        { id: 16, pId: 1, name: "滨江区", target: "_self", url: "#"},
+        { id: 17, pId: 1, name: "余杭区", target: "_self", url: "#"},
+        { id: 18, pId: 1, name: "萧山区", target: "_self", url: "#"},
+        { id: 2, pId: 0, name: "宁波市", open: false},
+        { id: 21, pId: 2, name: "海曙区", target: "_self", url: "#"},
+        { id: 22, pId: 2, name: "江东区", target: "_self", url: "#"},
+        { id: 23, pId: 2, name: "江北区", target: "_self", url: "#"},
+        { id: 24, pId: 2, name: "北仑区", target: "_self", url: "#"},
+        { id: 25, pId: 2, name: "镇海区", target: "_self", url: "#"},
+        { id: 26, pId: 2, name: "鄞州区", target: "_self", url: "#"}
+    ];
+
+    $(document).ready(function () {
+        $.fn.zTree.init($("#treeDemo"), setting, zNodes);
+    });
+</script>

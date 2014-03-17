@@ -1,0 +1,62 @@
+<script type="text/javascript">
+    var setting = {
+        data: {
+            simpleData: {
+                enable: true
+            }
+        }
+    };
+
+    var zNodes = [
+        { id: 1, pId: 0, name: "查询", open: true},
+        { id: 11, pId: 1, name: "汇总查询", target: "iFrame1", url: "detail_10.html"},
+        { id: 12, pId: 1, name: "自由查询", target: "iFrame1", url: "iframe_00.html"},
+        { id: 2, pId: 0, name: "统计报表(统计数据)", open: true},
+        { id: 21, pId: 2, name: "在手订单", open: true, target: "iFrame1", url: "iframe_01.html"},
+        { id: 212, pId: 21, name: "分行业", target: "iFrame1", url: "iframe_02.html"},
+        { id: 213, pId: 21, name: "分规模", target: "iFrame1", url: "iframe_03.html"},
+        { id: 214, pId: 21, name: "分企业类型", target: "iFrame1", url: "iframe_04.html"},
+        { id: 215, pId: 21, name: "分贸易方式", target: "iFrame1", url: "iframe_05.html"},
+        { id: 216, pId: 21, name: "分地市", target: "iFrame1", url: "iframe_06.html"},
+        { id: 22, pId: 2, name: "订单短期比", open: false, target: "iFrame1", url: "iframe_01.html"},
+        { id: 222, pId: 22, name: "分行业", target: "iFrame1", url: "iframe_02.html"},
+        { id: 223, pId: 22, name: "分规模", target: "iFrame1", url: "iframe_03.html"},
+        { id: 224, pId: 22, name: "分企业类型", target: "iFrame1", url: "iframe_04.html"},
+        { id: 225, pId: 22, name: "分贸易方式", target: "iFrame1", url: "iframe_05.html"},
+        { id: 226, pId: 22, name: "分地市", target: "iFrame1", url: "iframe_06.html"},
+        { id: 23, pId: 2, name: "信心指数", open: false, target: "iFrame1", url: "iframe_01.html"},
+        { id: 232, pId: 23, name: "分行业", target: "iFrame1", url: "iframe_02.html"},
+        { id: 233, pId: 23, name: "分规模", target: "iFrame1", url: "iframe_03.html"},
+        { id: 234, pId: 23, name: "分企业类型", target: "iFrame1", url: "iframe_04.html"},
+        { id: 235, pId: 23, name: "分贸易方式", target: "iFrame1", url: "iframe_05.html"},
+        { id: 236, pId: 23, name: "分地市", target: "iFrame1", url: "iframe_06.html"},
+        { id: 24, pId: 2, name: "企业利润", open: false, target: "iFrame1", url: "iframe_01.html"},
+        { id: 242, pId: 24, name: "分行业", target: "iFrame1", url: "iframe_02.html"},
+        { id: 243, pId: 24, name: "分规模", target: "iFrame1", url: "iframe_03.html"},
+        { id: 244, pId: 24, name: "分企业类型", target: "iFrame1", url: "iframe_04.html"},
+        { id: 245, pId: 24, name: "分贸易方式", target: "iFrame1", url: "iframe_05.html"},
+        { id: 246, pId: 24, name: "分地市", target: "iFrame1", url: "iframe_06.html"},
+        { id: 25, pId: 2, name: "订单转移", open: false, target: "iFrame1", url: "iframe_01.html"},
+        { id: 252, pId: 25, name: "分行业", target: "iFrame1", url: "iframe_02.html"},
+        { id: 253, pId: 25, name: "分规模", target: "iFrame1", url: "iframe_03.html"},
+        { id: 254, pId: 25, name: "分企业类型", target: "iFrame1", url: "iframe_04.html"},
+        { id: 255, pId: 25, name: "分贸易方式", target: "iFrame1", url: "iframe_05.html"},
+        { id: 256, pId: 25, name: "分地市", target: "iFrame1", url: "iframe_06.html"},
+        { id: 26, pId: 2, name: "订单金额", open: false, target: "iFrame1", url: "iframe_01.html"},
+        { id: 262, pId: 26, name: "分行业", target: "iFrame1", url: "iframe_02.html"},
+        { id: 263, pId: 26, name: "分规模", target: "iFrame1", url: "iframe_03.html"},
+        { id: 264, pId: 26, name: "分企业类型", target: "iFrame1", url: "iframe_04.html"},
+        { id: 265, pId: 26, name: "分贸易方式", target: "iFrame1", url: "iframe_05.html"},
+        { id: 266, pId: 26, name: "分地市", target: "iFrame1", url: "iframe_06.html"},
+        { id: 27, pId: 2, name: "下月预计", open: false, target: "iFrame1", url: "iframe_01.html"},
+        { id: 272, pId: 27, name: "分行业", target: "iFrame1", url: "iframe_02.html"},
+        { id: 273, pId: 27, name: "分规模", target: "iFrame1", url: "iframe_03.html"},
+        { id: 274, pId: 27, name: "分企业类型", target: "iFrame1", url: "iframe_04.html"},
+        { id: 275, pId: 27, name: "分贸易方式", target: "iFrame1", url: "iframe_05.html"},
+        { id: 276, pId: 27, name: "分地市", target: "iFrame1", url: "iframe_06.html"}
+    ];
+
+    $(document).ready(function () {
+        $.fn.zTree.init($("#treeDemo"), setting, zNodes);
+    });
+</script>
