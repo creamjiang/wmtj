@@ -64,4 +64,15 @@
     $("#hgdm_m").on("click", function () {
         $("#hgdm_val").val("");
     });
+
+    $(".no3 > input").on("click", function () {
+        var $this = $(this).val();
+        if ($this === "0") {
+            $(".no4").show();
+            $(".no5").hide();
+        } else if ($this === "1") {
+            $(".no5").show();
+            $(".no4").hide();
+        }
+    });
 })(jQuery);

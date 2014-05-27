@@ -95,6 +95,10 @@ table label input {
     background: url("image/input_bg.gif") repeat-x;
 }
 
+input[type="text"].D_text_a {
+    text-indent: 3px;
+}
+
 .D_text_b {
     width: 326px;
     height: 20px;
