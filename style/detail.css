@@ -95,7 +95,7 @@ table label input {
     background: url("image/input_bg.gif") repeat-x;
 }
 
-input[type="text"].D_text_a {
+input[type="text"].D_text_a, input[type="text"].D_text_c, input[type="text"].D_text_f {
     text-indent: 3px;
 }
 
@@ -123,6 +123,7 @@ input[type="text"].D_text_a {
     background: url("image/input_bg.gif") repeat-x;
     margin: 5px 0;
     overflow: auto;
+    padding: 3px;
 }
 
 .D_text_e {
